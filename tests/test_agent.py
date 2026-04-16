@@ -40,7 +40,7 @@ def test_agent_calls_write_report_and_returns_path(tmp_path):
     ]
 
     with patch("agent.agent.chat", side_effect=responses), \
-         patch("agent.tools.write_report", return_value=output_file) as mock_write:
+         patch("agent.agent.tool_fns.write_report", return_value=output_file) as mock_write:
         from agent.agent import run
         result = run(SAMPLE_LISTINGS)
 

@@ -90,11 +90,21 @@ TOOL_MAP = {
 
 
 def run(listings: list):
+    current = listings  # we track state; LLM only sees summaries
+
+    summary = [
+        {"title": l.get("title"), "company": l.get("company"), "deadline": l.get("deadline")}
+        for l in listings
+    ]
     messages = [
         {"role": "system", "content": SYSTEM_PROMPT},
         {
             "role": "user",
-            "content": f"Here are the raw internship listings to process:\n{json.dumps(listings, indent=2)}",
+            "content": (
+                f"You have {len(listings)} internship listings to process.\n"
+                f"Call tools in order: filter_expired → score_listing → deduplicate → rank_listings → write_report.\n\n"
+                f"Listing titles:\n{json.dumps(summary, indent=2)}"
+            ),
         },
     ]
 
@@ -119,20 +129,20 @@ def run(listings: list):
 
         for tc in response.tool_calls:
             name = tc.function.name
-            args = json.loads(tc.function.arguments)
             logger.info(f"[iteration {iteration}] Agent calling: {name}")
 
-            result = TOOL_MAP[name](args)
-
-            messages.append({
-                "role": "tool",
-                "tool_call_id": tc.id,
-                "content": json.dumps(result),
-            })
+            result = TOOL_MAP[name]({"listings": current})
 
             if name == "write_report":
                 logger.info(f"Report written to: {result}")
                 return result
+
+            current = result
+            messages.append({
+                "role": "tool",
+                "tool_call_id": tc.id,
+                "content": f"Done. {len(current)} listings remaining.",
+            })
 
     logger.warning("Agent hit max iterations without finishing")
     return None
