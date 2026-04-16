@@ -134,6 +134,11 @@ def run(listings: list):
             result = TOOL_MAP[name]({"listings": current})
 
             if name == "write_report":
+                messages.append({
+                    "role": "tool",
+                    "tool_call_id": tc.id,
+                    "content": f"Report written to {result}.",
+                })
                 logger.info(f"Report written to: {result}")
                 return result
 

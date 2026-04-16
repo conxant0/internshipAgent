@@ -31,7 +31,7 @@ def _compute_score(listing: dict) -> int:
     # Skills match — 8 pts per skill, max 40
     skills = ["python", "django", "react", "aws", "docker"]
     text = (listing.get("description") or "").lower()
-    text += " ".join(r.lower() for r in (listing.get("requirements") or []))
+    text += " " + " ".join(r.lower() for r in (listing.get("requirements") or []))
     matched = sum(1 for skill in skills if skill in text)
     score += matched * 8
 
@@ -85,9 +85,12 @@ def rank_listings(listings: List[dict]) -> List[dict]:
     return sorted(listings, key=lambda x: x.get("score", 0), reverse=True)
 
 
-def write_report(listings: List[dict], output_path: str = "output/report.md") -> str:
+def write_report(listings: List[dict], output_path: str = "") -> str:
     """Write the ranked report to a markdown file. Returns the file path."""
     import os
+    from pathlib import Path
+    if not output_path:
+        output_path = str(Path(__file__).parent.parent / "output" / "report.md")
     os.makedirs(os.path.dirname(output_path) if os.path.dirname(output_path) else ".", exist_ok=True)
     lines = ["# Internship Listings — Ranked Report\n"]
 

@@ -7,23 +7,25 @@ from pathlib import Path
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 logger = logging.getLogger(__name__)
 
+BASE = Path(__file__).parent
+
 
 def run_scrapers():
     from scrapers.prosple import scrape as scrape_prosple
 
-    Path("data/raw").mkdir(parents=True, exist_ok=True)
+    (BASE / "data" / "raw").mkdir(parents=True, exist_ok=True)
 
     for name, fn in [("prosple", scrape_prosple)]:
         logger.info(f"Scraping {name}...")
         listings = fn()
-        path = f"data/raw/{name}.json"
+        path = BASE / "data" / "raw" / f"{name}.json"
         with open(path, "w") as f:
             json.dump(listings, f, indent=2)
         logger.info(f"  -> saved {len(listings)} listings to {path}")
 
 
 def load_raw_data() -> list:
-    raw_dir = Path("data/raw")
+    raw_dir = BASE / "data" / "raw"
     listings = []
     for json_file in raw_dir.glob("*.json"):
         with open(json_file) as f:
