@@ -1,0 +1,6 @@
+.env
+data/raw/*.json
+output/*.md
+__pycache__/
+*.pyc
+.pytest_cache/
