@@ -1,0 +1,23 @@
+import os
+from groq import Groq
+from dotenv import load_dotenv
+
+load_dotenv()
+
+
+def chat(messages: list, tools: list = None):
+    """
+    Send messages to Groq and return the assistant message object.
+    Pass tools to enable tool use. Returns a ChatCompletionMessage.
+    """
+    client = Groq(api_key=os.environ["GROQ_API_KEY"])
+    kwargs = {
+        "model": "llama-3.3-70b-versatile",
+        "messages": messages,
+    }
+    if tools:
+        kwargs["tools"] = tools
+        kwargs["tool_choice"] = "auto"
+
+    response = client.chat.completions.create(**kwargs)
+    return response.choices[0].message
