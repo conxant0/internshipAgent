@@ -36,13 +36,18 @@ def fetch_descriptions(listings: list[dict]) -> list[dict]:
     for listing in listings:
         fetcher = DESCRIPTION_FETCHERS.get(listing["source"])
         if fetcher and not listing.get("description"):
-            listing["description"] = fetcher(listing["url"])
+            try:
+                listing["description"] = fetcher(listing["url"])
+            except Exception as e:
+                logger.warning(f"fetch_description failed for {listing['url']}: {e}")
     return listings
 ```
 
 Only visits detail pages for listings that:
 - Have a registered fetcher for their source
 - Don't already have a description (avoids redundant fetches)
+
+If `fetch_description` raises for any reason (timeout, unexpected page structure, network error), that listing's `description` stays empty and the loop continues. The listing is not dropped — it still gets scored and ranked on its other fields.
 
 ### Pipeline change
 
