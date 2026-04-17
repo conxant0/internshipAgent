@@ -264,3 +264,11 @@ def test_enrich_continues_on_bad_json():
     with patch("agent.tools.chat", return_value=_mock_llm_response("not valid json")):
         result = enrich_listings([listing])
     assert result[0]["compensation"] == "Paid"
+
+def test_enrich_strips_markdown_code_fences():
+    listing = make_listing(description=ENRICH_DESCRIPTION, compensation="Paid")
+    with patch("agent.tools.chat", return_value=_mock_llm_response(
+        '```json\n{"compensation": "PHP 9000/month", "deadline": null, "location": null, "requirements": null}\n```'
+    )):
+        result = enrich_listings([listing])
+    assert result[0]["compensation"] == "PHP 9000/month"

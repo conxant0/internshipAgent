@@ -50,7 +50,13 @@ def enrich_listings(listings: List[dict]) -> List[dict]:
                 [{"role": "user", "content": _ENRICH_PROMPT.format(description=description)}],
                 model=_ENRICH_MODEL,
             )
-            extracted = _json.loads(response.content)
+            content = response.content.strip()
+            if content.startswith("```"):
+                content = content.split("```", 2)[1]
+                if content.startswith("json"):
+                    content = content[4:]
+                content = content.rsplit("```", 1)[0].strip()
+            extracted = _json.loads(content)
             for field in ("compensation", "deadline", "location", "requirements"):
                 if extracted.get(field) is not None:
                     listing[field] = extracted[field]
