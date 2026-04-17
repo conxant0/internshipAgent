@@ -17,7 +17,7 @@ _ENRICH_PROMPT = """Extract the following fields from this job description. Retu
 If a field is not mentioned, return null for that key.
 
 Fields:
-- compensation: string (e.g. "PHP 8000/month") or null
+- compensation: string including amount and frequency if mentioned (e.g. "PHP 8000/month", "PHP 500/day", "PHP 2000/week", "PHP 10000 upon completion"). Include the frequency (monthly, weekly, daily, upon completion) when stated. or null
 - deadline: string in YYYY-MM-DD format or null
 - location: string (e.g. "Cebu City, Philippines") or null
 - requirements: list of SPECIFIC technical skills only — tools, software, programming languages, platforms (e.g. ["Python", "React", "SQL", "MS Office"]). EXCLUDE soft skills (communication, teamwork), personality traits, degree requirements, industry interests, or anything that is not a concrete technical skill or tool. Return null if none found.
