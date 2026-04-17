@@ -5,8 +5,7 @@ import agent.tools as tool_fns
 
 logger = logging.getLogger(__name__)
 
-SYSTEM_PROMPT = """You are an internship ranking agent for a 3rd year CS student based in Cebu, Philippines.
-Their skills: Python, Django, React, AWS, Docker.
+SYSTEM_PROMPT = """You are an internship ranking agent.
 
 You have raw internship listings to process. Use your tools in this order:
 1. filter_expired — remove listings with past deadlines
@@ -106,19 +105,21 @@ TOOLS = [
     },
 ]
 
-TOOL_MAP = {
-    "filter_expired":    lambda args: tool_fns.filter_expired(args["listings"]),
-    "fetch_descriptions": lambda args: tool_fns.fetch_descriptions(args["listings"]),
-    "enrich_listings":    lambda args: tool_fns.enrich_listings(args["listings"]),
-    "score_listing":     lambda args: tool_fns.score_listing(args["listings"]),
-    "deduplicate":    lambda args: tool_fns.deduplicate(args["listings"]),
-    "rank_listings":  lambda args: tool_fns.rank_listings(args["listings"]),
-    "write_report":   lambda args: tool_fns.write_report(args["listings"]),
-}
-
-
-def run(listings: list):
+def run(listings: list, profile: dict = None, preferences: dict = None):
     current = listings  # we track state; LLM only sees summaries
+
+    _profile = profile or {}
+    _preferences = preferences or {}
+
+    tool_map = {
+        "filter_expired":     lambda args: tool_fns.filter_expired(args["listings"]),
+        "fetch_descriptions": lambda args: tool_fns.fetch_descriptions(args["listings"]),
+        "enrich_listings":    lambda args: tool_fns.enrich_listings(args["listings"]),
+        "score_listing":      lambda args: tool_fns.score_listing(args["listings"], _profile, _preferences),
+        "deduplicate":        lambda args: tool_fns.deduplicate(args["listings"]),
+        "rank_listings":      lambda args: tool_fns.rank_listings(args["listings"]),
+        "write_report":       lambda args: tool_fns.write_report(args["listings"]),
+    }
 
     summary = [
         {"title": l.get("title"), "company": l.get("company"), "deadline": l.get("deadline")}
@@ -159,7 +160,7 @@ def run(listings: list):
             name = tc.function.name
             logger.info(f"[iteration {iteration}] Agent calling: {name}")
 
-            result = TOOL_MAP[name]({"listings": current})
+            result = tool_map[name]({"listings": current})
 
             if name == "write_report":
                 messages.append({
