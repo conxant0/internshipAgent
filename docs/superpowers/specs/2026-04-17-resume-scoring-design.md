@@ -73,7 +73,7 @@ Location scoring uses `preferences.location_preference` from `preferences.json`.
 - Extracts raw text via `pdfplumber` (PDF) or `python-docx` (DOCX)
 - Calls LLM once with raw text to extract structured profile
 - Saves result to `data/profile.json`
-- If `data/profile.json` already exists, skips parsing (delete to force refresh)
+- If `data/profile.json` already exists and is newer than the resume file, skips parsing — otherwise re-parses automatically (uses `os.path.getmtime()` comparison)
 
 ### `agent/tools.py` — `score_listing` rewrite
 
@@ -88,7 +88,7 @@ Location scoring uses `preferences.location_preference` from `preferences.json`.
 
 - Before starting the agent loop:
   - Checks for `data/preferences.json` — raises `FileNotFoundError` with message: `"No preferences.json found at data/preferences.json. Please create it with your target_role and location_preference."` if missing
-  - Checks for `data/profile.json` — if missing, calls `resume_parser.py` to generate it
+  - Checks for `data/profile.json` — if missing or older than the resume file, calls `resume_parser.py` to regenerate it
   - If no resume file found during parsing: raises `FileNotFoundError` with message: `"No resume found at data/resume.pdf (or .docx). Please add your resume to get started."`
 
 ### Report (`write_report`)
