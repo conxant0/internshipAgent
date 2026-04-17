@@ -18,7 +18,7 @@ def scrape() -> list:
         return []
 
 
-def _fetch_html() -> str:
+def _fetch_html(url: str = URL) -> str:
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         context = browser.new_context(
@@ -29,7 +29,7 @@ def _fetch_html() -> str:
             )
         )
         page = context.new_page()
-        page.goto(URL, wait_until="domcontentloaded", timeout=60000)
+        page.goto(url, wait_until="domcontentloaded", timeout=60000)
         page.wait_for_timeout(5000)
         html = page.content()
         browser.close()
@@ -105,3 +105,13 @@ def _normalise(raw: dict, apollo_data: dict) -> dict:
         "source": "prosple",
         "url": url,
     }
+
+
+def fetch_description(url: str) -> str:
+    """Fetch the full description from a Prosple listing detail page."""
+    html = _fetch_html(url)
+    apollo_data = _extract_apollo_data(html)
+    for key, value in apollo_data.items():
+        if key.startswith("Opportunity:"):
+            return (value.get("overview") or {}).get("summary") or ""
+    return ""
