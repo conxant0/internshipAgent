@@ -20,7 +20,7 @@ Fields:
 - compensation: string (e.g. "PHP 8000/month") or null
 - deadline: string in YYYY-MM-DD format or null
 - location: string (e.g. "Cebu City, Philippines") or null
-- requirements: list of specific skills (e.g. ["Python", "React", "SQL"]) or null
+- requirements: list of SPECIFIC technical skills only — tools, software, programming languages, platforms (e.g. ["Python", "React", "SQL", "MS Office"]). EXCLUDE soft skills (communication, teamwork), personality traits, degree requirements, industry interests, or anything that is not a concrete technical skill or tool. Return null if none found.
 
 Description:
 {description}"""
