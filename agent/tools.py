@@ -3,12 +3,27 @@ from datetime import date
 from typing import List
 
 import scrapers.prosple as _prosple
+from agent.llm_client import chat
 
 logger = logging.getLogger(__name__)
 
 DESCRIPTION_FETCHERS = {
     "prosple": _prosple.fetch_description,
 }
+
+_ENRICH_MODEL = "llama-3.1-8b-instant"
+
+_ENRICH_PROMPT = """Extract the following fields from this job description. Return ONLY a JSON object.
+If a field is not mentioned, return null for that key.
+
+Fields:
+- compensation: string (e.g. "PHP 8000/month") or null
+- deadline: string in YYYY-MM-DD format or null
+- location: string (e.g. "Cebu City, Philippines") or null
+- requirements: list of specific skills (e.g. ["Python", "React", "SQL"]) or null
+
+Description:
+{description}"""
 
 
 def fetch_descriptions(listings: List[dict]) -> List[dict]:
@@ -20,6 +35,27 @@ def fetch_descriptions(listings: List[dict]) -> List[dict]:
                 listing["description"] = fetcher(listing["url"])
             except Exception as e:
                 logger.warning(f"fetch_description failed for {listing.get('url')}: {e}")
+    return listings
+
+
+def enrich_listings(listings: List[dict]) -> List[dict]:
+    """Use a small LLM to extract structured fields from each listing's description."""
+    import json as _json
+    for listing in listings:
+        description = listing.get("description") or ""
+        if not description:
+            continue
+        try:
+            response = chat(
+                [{"role": "user", "content": _ENRICH_PROMPT.format(description=description)}],
+                model=_ENRICH_MODEL,
+            )
+            extracted = _json.loads(response.content)
+            for field in ("compensation", "deadline", "location", "requirements"):
+                if extracted.get(field) is not None:
+                    listing[field] = extracted[field]
+        except Exception as e:
+            logger.warning(f"enrich_listings failed for {listing.get('url')}: {e}")
     return listings
 
 

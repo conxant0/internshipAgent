@@ -190,3 +190,77 @@ def test_fetch_descriptions_continues_on_error():
 
     assert result[0]["description"] == ""
     assert result[1]["description"] == "Good description"
+
+
+# ── enrich_listings ───────────────────────────────────────────────────────────
+
+from agent.tools import enrich_listings
+
+ENRICH_DESCRIPTION = "Stipend: PHP 9000/month. Applications close 2026-07-31. Based in Cebu City. Must know Python and FastAPI."
+
+def _mock_llm_response(content: str):
+    msg = MagicMock()
+    msg.content = content
+    return msg
+
+def test_enrich_overwrites_compensation():
+    listing = make_listing(description=ENRICH_DESCRIPTION, compensation="Paid")
+    with patch("agent.tools.chat", return_value=_mock_llm_response(
+        '{"compensation": "PHP 9000/month", "deadline": null, "location": null, "requirements": null}'
+    )):
+        result = enrich_listings([listing])
+    assert result[0]["compensation"] == "PHP 9000/month"
+
+def test_enrich_overwrites_deadline():
+    listing = make_listing(description=ENRICH_DESCRIPTION, deadline=None)
+    with patch("agent.tools.chat", return_value=_mock_llm_response(
+        '{"compensation": null, "deadline": "2026-07-31", "location": null, "requirements": null}'
+    )):
+        result = enrich_listings([listing])
+    assert result[0]["deadline"] == "2026-07-31"
+
+def test_enrich_overwrites_requirements():
+    listing = make_listing(description=ENRICH_DESCRIPTION, requirements=["IT & Computer Science"])
+    with patch("agent.tools.chat", return_value=_mock_llm_response(
+        '{"compensation": null, "deadline": null, "location": null, "requirements": ["Python", "FastAPI"]}'
+    )):
+        result = enrich_listings([listing])
+    assert result[0]["requirements"] == ["Python", "FastAPI"]
+
+def test_enrich_leaves_field_unchanged_when_null():
+    listing = make_listing(description=ENRICH_DESCRIPTION, compensation="Paid — PHP 5000/monthly")
+    with patch("agent.tools.chat", return_value=_mock_llm_response(
+        '{"compensation": null, "deadline": null, "location": null, "requirements": null}'
+    )):
+        result = enrich_listings([listing])
+    assert result[0]["compensation"] == "Paid — PHP 5000/monthly"
+
+def test_enrich_skips_empty_description():
+    listing = make_listing(description="")
+    called = []
+    with patch("agent.tools.chat", side_effect=lambda *a, **kw: called.append(1)):
+        enrich_listings([listing])
+    assert len(called) == 0
+
+def test_enrich_continues_on_llm_error():
+    listings = [
+        make_listing(description="desc one", url="https://example.com/1"),
+        make_listing(description="desc two", url="https://example.com/2", compensation=None),
+    ]
+    call_count = [0]
+    def side_effect(*args, **kwargs):
+        call_count[0] += 1
+        if call_count[0] == 1:
+            raise Exception("LLM error")
+        return _mock_llm_response('{"compensation": "PHP 5000/month", "deadline": null, "location": null, "requirements": null}')
+
+    with patch("agent.tools.chat", side_effect=side_effect):
+        result = enrich_listings(listings)
+
+    assert result[1]["compensation"] == "PHP 5000/month"
+
+def test_enrich_continues_on_bad_json():
+    listing = make_listing(description="Some description here.")
+    with patch("agent.tools.chat", return_value=_mock_llm_response("not valid json")):
+        result = enrich_listings([listing])
+    assert result[0]["compensation"] == "Paid"
