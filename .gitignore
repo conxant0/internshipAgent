@@ -5,3 +5,5 @@ __pycache__/
 *.pyc
 .pytest_cache/
 .worktrees/
+data/preferences.json
+data/profile.json

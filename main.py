@@ -40,6 +40,18 @@ def main():
     parser.add_argument("--skip-scrape", action="store_true", help="Skip scraping and use existing data in data/raw/")
     args = parser.parse_args()
 
+    preferences_path = BASE / "data" / "preferences.json"
+    if not preferences_path.exists():
+        raise FileNotFoundError(
+            "No preferences.json found at data/preferences.json. "
+            "Please create it with your target_role and location_preference."
+        )
+    with open(preferences_path) as f:
+        preferences = json.load(f)
+
+    from resume_parser import parse_resume
+    profile = parse_resume(data_dir=BASE / "data")
+
     if not args.skip_scrape:
         run_scrapers()
 
@@ -51,7 +63,7 @@ def main():
     logger.info(f"Running agent on {len(listings)} listings...")
 
     from agent.agent import run
-    report_path = run(listings)
+    report_path = run(listings, profile=profile, preferences=preferences)
 
     if report_path:
         logger.info(f"Done! Report saved to: {report_path}")
