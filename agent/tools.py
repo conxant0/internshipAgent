@@ -170,7 +170,10 @@ def write_report(listings: List[dict], output_path: str = "") -> str:
         url          = listing.get("url") or "#"
 
         lines.append(f"## #{i} — {title} @ {company}")
-        lines.append(f"Score: {score}/100 | Location: {location} | Deadline: {deadline} | Compensation: {compensation}")
+        lines.append(f"Score: {score}/100")
+        lines.append(f"Location: {location}")
+        lines.append(f"Deadline: {deadline}")
+        lines.append(f"Compensation: {compensation}")
         if requirements:
             lines.append(f"Skills: {', '.join(requirements)}")
         lines.append("")
