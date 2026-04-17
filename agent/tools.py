@@ -1,5 +1,26 @@
+import logging
 from datetime import date
 from typing import List
+
+import scrapers.prosple as _prosple
+
+logger = logging.getLogger(__name__)
+
+DESCRIPTION_FETCHERS = {
+    "prosple": _prosple.fetch_description,
+}
+
+
+def fetch_descriptions(listings: List[dict]) -> List[dict]:
+    """Fetch full description from each listing's detail page. Skips on error."""
+    for listing in listings:
+        fetcher = DESCRIPTION_FETCHERS.get(listing.get("source", ""))
+        if fetcher and not listing.get("description"):
+            try:
+                listing["description"] = fetcher(listing["url"])
+            except Exception as e:
+                logger.warning(f"fetch_description failed for {listing.get('url')}: {e}")
+    return listings
 
 
 def filter_expired(listings: List[dict]) -> List[dict]:

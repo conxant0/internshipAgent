@@ -123,3 +123,56 @@ def test_write_report_contains_rank_number(tmp_path):
     write_report(listings, output_path=output_file)
     content = open(output_file).read()
     assert "#1" in content
+
+# ── fetch_descriptions ────────────────────────────────────────────────────────
+
+from unittest.mock import patch
+from agent.tools import fetch_descriptions
+
+def test_fetch_descriptions_populates_description():
+    listings = [make_listing(description="", source="prosple")]
+
+    def mock_fetcher(url):
+        return "Full description text."
+
+    with patch.dict("agent.tools.DESCRIPTION_FETCHERS", {"prosple": mock_fetcher}, clear=True):
+        result = fetch_descriptions(listings)
+
+    assert result[0]["description"] == "Full description text."
+
+def test_fetch_descriptions_skips_unknown_source():
+    listings = [make_listing(description="", source="kalibrr")]
+    result = fetch_descriptions(listings)
+    assert result[0]["description"] == ""
+
+def test_fetch_descriptions_skips_already_populated():
+    listings = [make_listing(description="existing text", source="prosple")]
+
+    called = []
+
+    def mock_fetcher(url):
+        called.append(url)
+        return "new description"
+
+    with patch.dict("agent.tools.DESCRIPTION_FETCHERS", {"prosple": mock_fetcher}, clear=True):
+        result = fetch_descriptions(listings)
+
+    assert result[0]["description"] == "existing text"
+    assert len(called) == 0
+
+def test_fetch_descriptions_continues_on_error():
+    listings = [
+        make_listing(description="", source="prosple", url="https://example.com/1"),
+        make_listing(description="", source="prosple", url="https://example.com/2"),
+    ]
+
+    def mock_fetcher(url):
+        if "1" in url:
+            raise Exception("Timeout")
+        return "Good description"
+
+    with patch.dict("agent.tools.DESCRIPTION_FETCHERS", {"prosple": mock_fetcher}, clear=True):
+        result = fetch_descriptions(listings)
+
+    assert result[0]["description"] == ""
+    assert result[1]["description"] == "Good description"
