@@ -51,8 +51,11 @@ The pipeline runs in three stages, wired together in `main.py`:
     "deadline": "YYYY-MM-DD" | None,
     "compensation": str | None,
     "description": str,       # often empty — fetched from list page only
-    "requirements": [str],    # study field labels (e.g. "IT & Computer Science")
+    "requirements": [str],    # concrete technical tools/skills only (e.g. ["Python", "SQL"])
     "source": str,            # scraper name
     "url": str,
+    # Added by enrich_listings (LLM-enriched fields):
+    "summary": str | None,        # 1-2 sentence role summary
+    "eligibility": [str] | None,  # year level, hours, degree/course restrictions, citizenship, etc.
 }
 ```
