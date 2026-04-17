@@ -73,48 +73,72 @@ def filter_expired(listings: List[dict]) -> List[dict]:
     return [l for l in listings if l.get("deadline") is None or l["deadline"] >= today]
 
 
-def score_listing(listings: List[dict]) -> List[dict]:
-    """Add a 'score' field (0-100) to each listing. Returns a new list."""
+_SCORE_MODEL = "llama-3.3-70b-versatile"
+
+_SCORE_PROMPT = """Score this internship listing for the candidate below. Return ONLY a JSON object.
+
+Scoring framework (total = 100 pts):
+- Skills match (25 pts): How well the candidate's existing skills align with the listing's requirements.
+- Role relevance (20 pts): How closely the listing title and responsibilities match the candidate's target role: {target_role}.
+- Eligibility fit (20 pts): Whether the candidate meets year level, degree, citizenship, or hours requirements.
+- Location (20 pts): Candidate prefers {location_preference}. Cebu-based or remote = 20 pts; onsite in other PH cities = 10 pts; international onsite = 2 pts.
+- Compensation (15 pts): Paid = 15 pts; unpaid = 0 pts; unspecified = 7 pts.
+
+Candidate profile:
+{profile_json}
+
+Listing:
+Title: {title}
+Company: {company}
+Location: {location}
+Description: {description}
+Requirements: {requirements}
+Eligibility: {eligibility}
+
+Return ONLY: {{"score": <int 0-100>, "rationale": "<2-3 sentence explanation of the score>"}}"""
+
+
+def score_listing(listings: List[dict], profile: dict, preferences: dict) -> List[dict]:
+    """Score each listing 0-100 using LLM with the user's profile and preferences."""
+    import json as _json
     result = []
     for listing in listings:
         scored = dict(listing)
-        scored["score"] = _compute_score(listing)
+        prompt = _SCORE_PROMPT.format(
+            target_role=preferences.get("target_role", ""),
+            location_preference=preferences.get("location_preference", ""),
+            profile_json=_json.dumps(profile, indent=2),
+            title=listing.get("title") or "",
+            company=listing.get("company") or "",
+            location=listing.get("location") or "Not specified",
+            description=listing.get("description") or "",
+            requirements=", ".join(listing.get("requirements") or []) or "Not specified",
+            eligibility=", ".join(listing.get("eligibility") or []) or "Not specified",
+        )
+        raw = None
+        for attempt in range(2):
+            try:
+                response = chat(
+                    [{"role": "user", "content": prompt}],
+                    model=_SCORE_MODEL,
+                )
+                raw = response.content
+                content = response.content.strip()
+                if content.startswith("```"):
+                    content = content.split("```", 2)[1]
+                    if content.startswith("json"):
+                        content = content[4:]
+                    content = content.rsplit("```", 1)[0].strip()
+                parsed = _json.loads(content)
+                scored["score"] = int(parsed["score"])
+                scored["rationale"] = parsed["rationale"]
+                break
+            except Exception:
+                pass
+        else:
+            raise ValueError(f"score_listing failed after 2 attempts. Last LLM output: {raw!r}")
         result.append(scored)
     return result
-
-
-def _compute_score(listing: dict) -> int:
-    score = 0
-
-    # Location — 25 pts
-    location = (listing.get("location") or "").lower()
-    if "cebu" in location:
-        score += 25
-    elif any(w in location for w in ["remote", "wfh", "work from home"]):
-        score += 20
-
-    # Skills match — 8 pts per skill, max 40
-    skills = ["python", "django", "react", "aws", "docker"]
-    text = (listing.get("description") or "").lower()
-    text += " " + " ".join(r.lower() for r in (listing.get("requirements") or []))
-    matched = sum(1 for skill in skills if skill in text)
-    score += matched * 8
-
-    # Internship type — 15 pts
-    title = (listing.get("title") or "").lower()
-    if any(w in title for w in ["intern", "ojt", "trainee"]):
-        score += 15
-
-    # Compensation — 10 pts
-    compensation = (listing.get("compensation") or "").lower()
-    if compensation and "unpaid" not in compensation:
-        score += 10
-
-    # Known deadline — 10 pts (null deadline is penalised)
-    if listing.get("deadline"):
-        score += 10
-
-    return min(score, 100)
 
 
 def deduplicate(listings: List[dict]) -> List[dict]:

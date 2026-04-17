@@ -42,29 +42,68 @@ def test_filter_expired_empty_list():
 
 # ── score_listing ─────────────────────────────────────────────────────────────
 
-def test_score_listing_returns_int():
+SAMPLE_PROFILE = {
+    "skills": ["Python", "Django", "React"],
+    "degree": "BS Computer Science",
+    "year_level": "3rd year",
+    "experience_summary": "Built web apps using Django and React.",
+}
+
+SAMPLE_PREFERENCES = {
+    "target_role": "Software Engineering",
+    "location_preference": "Cebu",
+}
+
+
+def _mock_score_response(score: int, rationale: str):
+    import json
+    msg = MagicMock()
+    msg.content = json.dumps({"score": score, "rationale": rationale})
+    return msg
+
+
+def test_score_listing_returns_int(monkeypatch):
     listing = make_listing()
-    scores = score_listing([listing])
+    with patch("agent.tools.chat", return_value=_mock_score_response(75, "Good match.")):
+        scores = score_listing([listing], SAMPLE_PROFILE, SAMPLE_PREFERENCES)
     assert isinstance(scores[0]["score"], int)
 
-def test_score_listing_cebu_scores_higher_than_manila():
-    cebu   = make_listing(location="Cebu")
-    manila = make_listing(location="Manila")
-    cebu_score   = score_listing([cebu])[0]["score"]
-    manila_score = score_listing([manila])[0]["score"]
-    assert cebu_score > manila_score
 
-def test_score_listing_skills_match_adds_points():
-    with_skills    = make_listing(description="We use Python, Django, React, AWS, Docker")
-    without_skills = make_listing(description="No relevant tech mentioned")
-    high = score_listing([with_skills])[0]["score"]
-    low  = score_listing([without_skills])[0]["score"]
-    assert high > low
-
-def test_score_listing_score_is_between_0_and_100():
+def test_score_listing_score_is_between_0_and_100(monkeypatch):
     listing = make_listing()
-    score = score_listing([listing])[0]["score"]
-    assert 0 <= score <= 100
+    with patch("agent.tools.chat", return_value=_mock_score_response(82, "Strong match.")):
+        scores = score_listing([listing], SAMPLE_PROFILE, SAMPLE_PREFERENCES)
+    assert 0 <= scores[0]["score"] <= 100
+
+
+def test_score_listing_includes_rationale(monkeypatch):
+    listing = make_listing()
+    with patch("agent.tools.chat", return_value=_mock_score_response(70, "Skills align well.")):
+        scores = score_listing([listing], SAMPLE_PROFILE, SAMPLE_PREFERENCES)
+    assert isinstance(scores[0]["rationale"], str)
+    assert len(scores[0]["rationale"]) > 0
+
+
+def test_score_listing_retries_on_bad_json(monkeypatch):
+    listing = make_listing()
+    bad_msg = MagicMock()
+    bad_msg.content = "not valid json"
+    good_msg = MagicMock()
+    good_msg.content = '{"score": 60, "rationale": "Recovered after retry."}'
+
+    with patch("agent.tools.chat", side_effect=[bad_msg, good_msg]):
+        scores = score_listing([listing], SAMPLE_PROFILE, SAMPLE_PREFERENCES)
+    assert scores[0]["score"] == 60
+
+
+def test_score_listing_raises_after_two_bad_responses(monkeypatch):
+    listing = make_listing()
+    bad_msg = MagicMock()
+    bad_msg.content = "not valid json"
+
+    with patch("agent.tools.chat", return_value=bad_msg):
+        with pytest.raises(ValueError, match="score_listing failed"):
+            score_listing([listing], SAMPLE_PROFILE, SAMPLE_PREFERENCES)
 
 # ── deduplicate ───────────────────────────────────────────────────────────────
 
