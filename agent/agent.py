@@ -10,10 +10,11 @@ Their skills: Python, Django, React, AWS, Docker.
 
 You have raw internship listings to process. Use your tools in this order:
 1. filter_expired — remove listings with past deadlines
-2. score_listing — score all remaining listings for relevance
-3. deduplicate — merge duplicate listings across sources
-4. rank_listings — sort by score
-5. write_report — write the final report (call this last)
+2. fetch_descriptions — fetch the full description text from each listing's detail page
+3. score_listing — score all remaining listings for relevance
+4. deduplicate — merge duplicate listings across sources
+5. rank_listings — sort by score
+6. write_report — write the final report (call this last)
 
 Always call write_report when you are done. Do not stop before calling it."""
 
@@ -23,6 +24,18 @@ TOOLS = [
         "function": {
             "name": "filter_expired",
             "description": "Remove listings whose deadline has already passed. Null deadlines are kept.",
+            "parameters": {
+                "type": "object",
+                "properties": {"listings": {"type": "array", "items": {"type": "object"}}},
+                "required": ["listings"],
+            },
+        },
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "fetch_descriptions",
+            "description": "Fetch full description text from each listing's detail page. Call this after filter_expired and before score_listing.",
             "parameters": {
                 "type": "object",
                 "properties": {"listings": {"type": "array", "items": {"type": "object"}}},
@@ -81,8 +94,9 @@ TOOLS = [
 ]
 
 TOOL_MAP = {
-    "filter_expired": lambda args: tool_fns.filter_expired(args["listings"]),
-    "score_listing":  lambda args: tool_fns.score_listing(args["listings"]),
+    "filter_expired":    lambda args: tool_fns.filter_expired(args["listings"]),
+    "fetch_descriptions": lambda args: tool_fns.fetch_descriptions(args["listings"]),
+    "score_listing":     lambda args: tool_fns.score_listing(args["listings"]),
     "deduplicate":    lambda args: tool_fns.deduplicate(args["listings"]),
     "rank_listings":  lambda args: tool_fns.rank_listings(args["listings"]),
     "write_report":   lambda args: tool_fns.write_report(args["listings"]),
@@ -102,7 +116,7 @@ def run(listings: list):
             "role": "user",
             "content": (
                 f"You have {len(listings)} internship listings to process.\n"
-                f"Call tools in order: filter_expired → score_listing → deduplicate → rank_listings → write_report.\n\n"
+                f"Call tools in order: filter_expired → fetch_descriptions → score_listing → deduplicate → rank_listings → write_report.\n\n"
                 f"Listing titles:\n{json.dumps(summary, indent=2)}"
             ),
         },
