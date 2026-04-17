@@ -22,6 +22,7 @@ Fields:
 - location: string (e.g. "Cebu City, Philippines") or null
 - summary: 1-2 sentence plain description of what the intern will actually do in the role. Focus on responsibilities only. Do not mention skills, tools, compensation, or requirements — those are captured separately. No filler phrases like "join our team" or "exciting opportunity". Return null if unclear.
 - requirements: list of SPECIFIC technical skills only — tools, software, programming languages, platforms (e.g. ["Python", "React", "SQL", "MS Office"]). EXCLUDE soft skills (communication, teamwork), personality traits, degree requirements, industry interests, or anything that is not a concrete technical skill or tool. Return null if none found.
+- eligibility: list of plain-English eligibility constraints — year level required (e.g. "3rd year students only"), hours to render (e.g. "480 hours required"), internship type (e.g. "voluntary internship only", "academic internship only", "for-credit internship"), course restrictions (e.g. "BS Computer Science only"), citizenship requirements. Each item is a short phrase. Return null if none found.
 
 Description:
 {description}"""
@@ -58,7 +59,7 @@ def enrich_listings(listings: List[dict]) -> List[dict]:
                     content = content[4:]
                 content = content.rsplit("```", 1)[0].strip()
             extracted = _json.loads(content)
-            for field in ("compensation", "deadline", "location", "requirements", "summary"):
+            for field in ("compensation", "deadline", "location", "requirements", "summary", "eligibility"):
                 if extracted.get(field) is not None:
                     listing[field] = extracted[field]
         except Exception as e:

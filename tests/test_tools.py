@@ -272,3 +272,19 @@ def test_enrich_strips_markdown_code_fences():
     )):
         result = enrich_listings([listing])
     assert result[0]["compensation"] == "PHP 9000/month"
+
+def test_enrich_extracts_eligibility():
+    listing = make_listing(description="Must be a 3rd year CS student. 480 hours required. Voluntary internship only.")
+    with patch("agent.tools.chat", return_value=_mock_llm_response(
+        '{"compensation": null, "deadline": null, "location": null, "requirements": null, "summary": null, "eligibility": ["3rd year CS students only", "480 hours required", "voluntary internship only"]}'
+    )):
+        result = enrich_listings([listing])
+    assert result[0]["eligibility"] == ["3rd year CS students only", "480 hours required", "voluntary internship only"]
+
+def test_enrich_leaves_eligibility_absent_when_null():
+    listing = make_listing(description="Join our team as a software intern.")
+    with patch("agent.tools.chat", return_value=_mock_llm_response(
+        '{"compensation": null, "deadline": null, "location": null, "requirements": null, "summary": null, "eligibility": null}'
+    )):
+        result = enrich_listings([listing])
+    assert "eligibility" not in result[0]
