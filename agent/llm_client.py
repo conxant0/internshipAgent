@@ -5,14 +5,14 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-def chat(messages: list, tools: list = None):
+def chat(messages: list, tools: list = None, model: str = "llama-3.3-70b-versatile"):
     """
     Send messages to Groq and return the assistant message object.
     Pass tools to enable tool use. Returns a ChatCompletionMessage.
     """
     client = Groq(api_key=os.environ["GROQ_API_KEY"])
     kwargs = {
-        "model": "llama-3.3-70b-versatile",
+        "model": model,
         "messages": messages,
     }
     if tools:
