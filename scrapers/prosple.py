@@ -109,9 +109,12 @@ def _normalise(raw: dict, apollo_data: dict) -> dict:
 
 def fetch_description(url: str) -> str:
     """Fetch the full description from a Prosple listing detail page."""
-    html = _fetch_html(url, wait_until="networkidle")
+    html = _fetch_html(url, wait_until="load")
     apollo_data = _extract_apollo_data(html)
     for key, value in apollo_data.items():
         if key.startswith("Opportunity:"):
-            return (value.get("overview") or {}).get("summary") or ""
+            full_html = (value.get("overview") or {}).get("fullText") or ""
+            if full_html:
+                return BeautifulSoup(full_html, "html.parser").get_text(separator=" ", strip=True)
+            return ""
     return ""
