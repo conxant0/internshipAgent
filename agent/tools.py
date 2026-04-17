@@ -192,10 +192,13 @@ def write_report(listings: List[dict], output_path: str = "") -> str:
         compensation = listing.get("compensation") or "Not specified"
         requirements = listing.get("requirements") or []
         summary      = listing.get("summary") or ""
+        rationale    = listing.get("rationale") or ""
         url          = listing.get("url") or "#"
 
         lines.append(f"## #{i} — {title} @ {company}")
         lines.append(f"Score: {score}/100")
+        if rationale:
+            lines.append(f"Why: {rationale}")
         lines.append(f"Location: {location}")
         lines.append(f"Deadline: {deadline}")
         lines.append(f"Compensation: {compensation}")

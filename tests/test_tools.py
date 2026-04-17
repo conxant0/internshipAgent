@@ -179,6 +179,13 @@ def test_write_report_omits_eligibility_when_absent(tmp_path):
     content = open(output_file).read()
     assert "Eligibility:" not in content
 
+def test_write_report_shows_rationale(tmp_path):
+    listing = make_listing(score=85, rationale="Strong Python skills match. Cebu location is ideal. Paid internship.")
+    output_file = str(tmp_path / "report.md")
+    write_report([listing], output_path=output_file)
+    content = open(output_file).read()
+    assert "Strong Python skills match." in content
+
 # ── fetch_descriptions ────────────────────────────────────────────────────────
 
 from unittest.mock import patch, MagicMock
