@@ -20,6 +20,7 @@ Fields:
 - compensation: string including amount and frequency if mentioned (e.g. "PHP 8000/month", "PHP 500/day", "PHP 2000/week", "PHP 10000 upon completion"). Include the frequency (monthly, weekly, daily, upon completion) when stated. or null
 - deadline: string in YYYY-MM-DD format or null
 - location: string (e.g. "Cebu City, Philippines") or null
+- summary: 1-2 sentence plain description of what the intern will actually do in the role. Focus on responsibilities only. Do not mention skills, tools, compensation, or requirements — those are captured separately. No filler phrases like "join our team" or "exciting opportunity". Return null if unclear.
 - requirements: list of SPECIFIC technical skills only — tools, software, programming languages, platforms (e.g. ["Python", "React", "SQL", "MS Office"]). EXCLUDE soft skills (communication, teamwork), personality traits, degree requirements, industry interests, or anything that is not a concrete technical skill or tool. Return null if none found.
 
 Description:
@@ -57,7 +58,7 @@ def enrich_listings(listings: List[dict]) -> List[dict]:
                     content = content[4:]
                 content = content.rsplit("```", 1)[0].strip()
             extracted = _json.loads(content)
-            for field in ("compensation", "deadline", "location", "requirements"):
+            for field in ("compensation", "deadline", "location", "requirements", "summary"):
                 if extracted.get(field) is not None:
                     listing[field] = extracted[field]
         except Exception as e:
@@ -164,18 +165,17 @@ def write_report(listings: List[dict], output_path: str = "") -> str:
         location     = listing.get("location") or "Not specified"
         deadline     = listing.get("deadline") or "Not specified"
         compensation = listing.get("compensation") or "Not specified"
-        description  = listing.get("description") or ""
         requirements = listing.get("requirements") or []
+        summary      = listing.get("summary") or ""
         url          = listing.get("url") or "#"
 
         lines.append(f"## #{i} — {title} @ {company}")
         lines.append(f"Score: {score}/100 | Location: {location} | Deadline: {deadline} | Compensation: {compensation}")
         if requirements:
-            lines.append(f"Skills mentioned: {', '.join(requirements)}")
+            lines.append(f"Skills: {', '.join(requirements)}")
         lines.append("")
-        if description:
-            short = description[:300] + ("..." if len(description) > 300 else "")
-            lines.append(short)
+        if summary:
+            lines.append(summary)
         lines.append("")
         lines.append(f"[View listing →]({url})")
         lines.append("")
