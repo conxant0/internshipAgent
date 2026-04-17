@@ -124,6 +124,22 @@ def test_write_report_contains_rank_number(tmp_path):
     content = open(output_file).read()
     assert "#1" in content
 
+def test_write_report_shows_eligibility(tmp_path):
+    listing = make_listing(score=80, eligibility=["3rd year CS students only", "480 hours required"])
+    output_file = str(tmp_path / "report.md")
+    write_report([listing], output_path=output_file)
+    content = open(output_file).read()
+    assert "Eligibility:" in content
+    assert "3rd year CS students only" in content
+    assert "480 hours required" in content
+
+def test_write_report_omits_eligibility_when_absent(tmp_path):
+    listing = make_listing(score=80)
+    output_file = str(tmp_path / "report.md")
+    write_report([listing], output_path=output_file)
+    content = open(output_file).read()
+    assert "Eligibility:" not in content
+
 # ── fetch_descriptions ────────────────────────────────────────────────────────
 
 from unittest.mock import patch, MagicMock
