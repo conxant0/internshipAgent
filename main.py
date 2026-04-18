@@ -12,10 +12,11 @@ BASE = Path(__file__).parent
 
 def run_scrapers():
     from scrapers.prosple import scrape as scrape_prosple
+    from scrapers.jobstreet import scrape as scrape_jobstreet
 
     (BASE / "data" / "raw").mkdir(parents=True, exist_ok=True)
 
-    for name, fn in [("prosple", scrape_prosple)]:
+    for name, fn in [("prosple", scrape_prosple), ("jobstreet", scrape_jobstreet)]:
         logger.info(f"Scraping {name}...")
         listings = fn()
         path = BASE / "data" / "raw" / f"{name}.json"
