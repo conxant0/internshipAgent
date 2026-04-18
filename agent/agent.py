@@ -8,13 +8,14 @@ logger = logging.getLogger(__name__)
 SYSTEM_PROMPT = """You are an internship ranking agent.
 
 You have raw internship listings to process. Use your tools in this order:
-1. filter_expired — remove listings with past deadlines
+1. filter_expired — remove listings with past deadlines (raw scraped data)
 2. fetch_descriptions — fetch the full description text from each listing's detail page
 3. enrich_listings — extract compensation, deadline, location, and requirements from each description
-4. score_listing — score all remaining listings for relevance
-5. deduplicate — merge duplicate listings across sources
-6. rank_listings — sort by score
-7. write_report — write the final report (call this last)
+4. filter_ineligible — drop listings with post-enrichment expired deadlines or non-CS/IT course restrictions
+5. score_listing — score all remaining listings for relevance
+6. deduplicate — merge duplicate listings across sources
+7. rank_listings — sort by score
+8. write_report — write the final report (call this last)
 
 Always call write_report when you are done. Do not stop before calling it."""
 
@@ -48,6 +49,18 @@ TOOLS = [
         "function": {
             "name": "enrich_listings",
             "description": "Use a small LLM to extract compensation, deadline, location, and specific skill requirements from each listing's description. Overwrites existing fields with more specific values. Call this after fetch_descriptions and before score_listing.",
+            "parameters": {
+                "type": "object",
+                "properties": {"listings": {"type": "array", "items": {"type": "object"}}},
+                "required": ["listings"],
+            },
+        },
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "filter_ineligible",
+            "description": "Drop listings with post-enrichment expired deadlines or eligibility constraints that restrict to a non-CS/IT course field. Call this after enrich_listings and before score_listing.",
             "parameters": {
                 "type": "object",
                 "properties": {"listings": {"type": "array", "items": {"type": "object"}}},
@@ -115,6 +128,7 @@ def run(listings: list, profile: dict = None, preferences: dict = None):
         "filter_expired":     lambda args: tool_fns.filter_expired(args["listings"]),
         "fetch_descriptions": lambda args: tool_fns.fetch_descriptions(args["listings"]),
         "enrich_listings":    lambda args: tool_fns.enrich_listings(args["listings"]),
+        "filter_ineligible":  lambda args: tool_fns.filter_ineligible(args["listings"]),
         "score_listing":      lambda args: tool_fns.score_listing(args["listings"], _profile, _preferences),
         "deduplicate":        lambda args: tool_fns.deduplicate(args["listings"]),
         "rank_listings":      lambda args: tool_fns.rank_listings(args["listings"]),
@@ -131,7 +145,7 @@ def run(listings: list, profile: dict = None, preferences: dict = None):
             "role": "user",
             "content": (
                 f"You have {len(listings)} internship listings to process.\n"
-                f"Call tools in order: filter_expired → fetch_descriptions → enrich_listings → score_listing → deduplicate → rank_listings → write_report.\n\n"
+                f"Call tools in order: filter_expired → fetch_descriptions → enrich_listings → filter_ineligible → score_listing → deduplicate → rank_listings → write_report.\n\n"
                 f"Listing titles:\n{json.dumps(summary, indent=2)}"
             ),
         },
