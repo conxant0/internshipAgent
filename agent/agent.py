@@ -19,103 +19,25 @@ You have raw internship listings to process. Use your tools in this order:
 
 Always call write_report when you are done. Do not stop before calling it."""
 
+def _no_params(name: str, description: str) -> dict:
+    return {
+        "type": "function",
+        "function": {
+            "name": name,
+            "description": description,
+            "parameters": {"type": "object", "properties": {}},
+        },
+    }
+
 TOOLS = [
-    {
-        "type": "function",
-        "function": {
-            "name": "filter_expired",
-            "description": "Remove listings whose deadline has already passed. Null deadlines are kept.",
-            "parameters": {
-                "type": "object",
-                "properties": {"listings": {"type": "array", "items": {"type": "object"}}},
-                "required": ["listings"],
-            },
-        },
-    },
-    {
-        "type": "function",
-        "function": {
-            "name": "fetch_descriptions",
-            "description": "Fetch full description text from each listing's detail page. Call this after filter_expired and before score_listing.",
-            "parameters": {
-                "type": "object",
-                "properties": {"listings": {"type": "array", "items": {"type": "object"}}},
-                "required": ["listings"],
-            },
-        },
-    },
-    {
-        "type": "function",
-        "function": {
-            "name": "enrich_listings",
-            "description": "Use a small LLM to extract compensation, deadline, location, and specific skill requirements from each listing's description. Overwrites existing fields with more specific values. Call this after fetch_descriptions and before score_listing.",
-            "parameters": {
-                "type": "object",
-                "properties": {"listings": {"type": "array", "items": {"type": "object"}}},
-                "required": ["listings"],
-            },
-        },
-    },
-    {
-        "type": "function",
-        "function": {
-            "name": "filter_ineligible",
-            "description": "Drop listings with post-enrichment expired deadlines or eligibility constraints that restrict to a non-CS/IT course field. Call this after enrich_listings and before score_listing.",
-            "parameters": {
-                "type": "object",
-                "properties": {"listings": {"type": "array", "items": {"type": "object"}}},
-                "required": ["listings"],
-            },
-        },
-    },
-    {
-        "type": "function",
-        "function": {
-            "name": "score_listing",
-            "description": "Score each listing 0-100 for relevance. Adds a 'score' field to each listing.",
-            "parameters": {
-                "type": "object",
-                "properties": {"listings": {"type": "array", "items": {"type": "object"}}},
-                "required": ["listings"],
-            },
-        },
-    },
-    {
-        "type": "function",
-        "function": {
-            "name": "deduplicate",
-            "description": "Remove duplicate listings. Keeps the richest version when duplicates are found.",
-            "parameters": {
-                "type": "object",
-                "properties": {"listings": {"type": "array", "items": {"type": "object"}}},
-                "required": ["listings"],
-            },
-        },
-    },
-    {
-        "type": "function",
-        "function": {
-            "name": "rank_listings",
-            "description": "Sort listings by score descending.",
-            "parameters": {
-                "type": "object",
-                "properties": {"listings": {"type": "array", "items": {"type": "object"}}},
-                "required": ["listings"],
-            },
-        },
-    },
-    {
-        "type": "function",
-        "function": {
-            "name": "write_report",
-            "description": "Write the final ranked report to output/report.md. Call this when all processing is done.",
-            "parameters": {
-                "type": "object",
-                "properties": {"listings": {"type": "array", "items": {"type": "object"}}},
-                "required": ["listings"],
-            },
-        },
-    },
+    _no_params("filter_expired", "Remove listings whose deadline has already passed. Null deadlines are kept."),
+    _no_params("fetch_descriptions", "Fetch full description text from each listing's detail page. Call this after filter_expired and before enrich_listings."),
+    _no_params("enrich_listings", "Use a small LLM to extract compensation, deadline, location, and requirements from each listing's description. Call this after fetch_descriptions and before filter_ineligible."),
+    _no_params("filter_ineligible", "Drop listings with post-enrichment expired deadlines or eligibility constraints that restrict to a non-CS/IT course field. Call this after enrich_listings and before score_listing."),
+    _no_params("score_listing", "Score each listing 0-100 for relevance. Adds a 'score' field to each listing."),
+    _no_params("deduplicate", "Remove duplicate listings. Keeps the richest version when duplicates are found."),
+    _no_params("rank_listings", "Sort listings by score descending."),
+    _no_params("write_report", "Write the final ranked report to output/report.md. Call this when all processing is done."),
 ]
 
 def run(listings: list, profile: dict = None, preferences: dict = None):
@@ -125,14 +47,14 @@ def run(listings: list, profile: dict = None, preferences: dict = None):
     _preferences = preferences or {}
 
     tool_map = {
-        "filter_expired":     lambda args: tool_fns.filter_expired(args["listings"]),
-        "fetch_descriptions": lambda args: tool_fns.fetch_descriptions(args["listings"]),
-        "enrich_listings":    lambda args: tool_fns.enrich_listings(args["listings"]),
-        "filter_ineligible":  lambda args: tool_fns.filter_ineligible(args["listings"]),
-        "score_listing":      lambda args: tool_fns.score_listing(args["listings"], _profile, _preferences),
-        "deduplicate":        lambda args: tool_fns.deduplicate(args["listings"]),
-        "rank_listings":      lambda args: tool_fns.rank_listings(args["listings"]),
-        "write_report":       lambda args: tool_fns.write_report(args["listings"]),
+        "filter_expired":     lambda lst: tool_fns.filter_expired(lst),
+        "fetch_descriptions": lambda lst: tool_fns.fetch_descriptions(lst),
+        "enrich_listings":    lambda lst: tool_fns.enrich_listings(lst),
+        "filter_ineligible":  lambda lst: tool_fns.filter_ineligible(lst),
+        "score_listing":      lambda lst: tool_fns.score_listing(lst, _profile, _preferences),
+        "deduplicate":        lambda lst: tool_fns.deduplicate(lst),
+        "rank_listings":      lambda lst: tool_fns.rank_listings(lst),
+        "write_report":       lambda lst: tool_fns.write_report(lst),
     }
 
     summary = [
@@ -174,7 +96,7 @@ def run(listings: list, profile: dict = None, preferences: dict = None):
             name = tc.function.name
             logger.info(f"[iteration {iteration}] Agent calling: {name}")
 
-            result = tool_map[name]({"listings": current})
+            result = tool_map[name](current)
 
             if name == "write_report":
                 messages.append({
