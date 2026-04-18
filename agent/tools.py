@@ -186,7 +186,7 @@ def score_listing(listings: List[dict], profile: dict, preferences: dict) -> Lis
             company=listing.get("company") or "",
             location=listing.get("location") or "Not specified",
             description=listing.get("description") or "",
-            requirements=", ".join(listing.get("requirements") or []) or "Not specified",
+            requirements=", ".join(r for r in (listing.get("requirements") or []) if r) or "Not specified",
             eligibility=", ".join(listing.get("eligibility") or []) or "Not specified",
         )
         raw = None
