@@ -60,7 +60,7 @@ def enrich_listings(listings: List[dict]) -> List[dict]:
                 content = content.rsplit("```", 1)[0].strip()
             extracted = _json.loads(content)
             for field in ("compensation", "deadline", "location", "requirements", "summary", "eligibility"):
-                if extracted.get(field) is not None:
+                if extracted.get(field):
                     listing[field] = extracted[field]
         except Exception as e:
             logger.warning(f"enrich_listings failed for {listing.get('url')}: {e}")
@@ -210,7 +210,9 @@ def score_listing(listings: List[dict], profile: dict, preferences: dict) -> Lis
             except Exception:
                 pass
         else:
-            raise ValueError(f"score_listing failed after 2 attempts. Last LLM output: {raw!r}")
+            logger.warning(f"score_listing failed after 2 attempts for '{listing.get('title')}'; assigning score=0. Last LLM output: {raw!r}")
+            scored["score"] = 0
+            scored["rationale"] = ""
         result.append(scored)
     return result
 

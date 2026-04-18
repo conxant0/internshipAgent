@@ -96,6 +96,15 @@ def run(listings: list, profile: dict = None, preferences: dict = None):
             name = tc.function.name
             logger.info(f"[iteration {iteration}] Agent calling: {name}")
 
+            if name not in tool_map:
+                logger.warning(f"[iteration {iteration}] Unknown tool: {name!r} — skipping")
+                messages.append({
+                    "role": "tool",
+                    "tool_call_id": tc.id,
+                    "content": f"Error: unknown tool '{name}'. Available tools: {', '.join(tool_map)}.",
+                })
+                continue
+
             result = tool_map[name](current)
 
             if name == "write_report":
