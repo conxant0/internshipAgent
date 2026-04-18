@@ -92,7 +92,8 @@ def run(listings: list, profile: dict = None, preferences: dict = None):
             logger.info("Agent stopped without calling write_report")
             return None
 
-        for tc in response.tool_calls:
+        tool_calls = list(response.tool_calls)
+        for idx, tc in enumerate(tool_calls):
             name = tc.function.name
             logger.info(f"[iteration {iteration}] Agent calling: {name}")
 
@@ -113,6 +114,13 @@ def run(listings: list, profile: dict = None, preferences: dict = None):
                     "tool_call_id": tc.id,
                     "content": f"Report written to {result}.",
                 })
+                # Satisfy the message contract for any remaining tool calls in this batch.
+                for remaining_tc in tool_calls[idx + 1:]:
+                    messages.append({
+                        "role": "tool",
+                        "tool_call_id": remaining_tc.id,
+                        "content": "Not executed — write_report already completed.",
+                    })
                 logger.info(f"Report written to: {result}")
                 return result
 
