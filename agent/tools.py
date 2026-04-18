@@ -73,6 +73,80 @@ def filter_expired(listings: List[dict]) -> List[dict]:
     return [l for l in listings if l.get("deadline") is None or l["deadline"] >= today]
 
 
+_CS_IT_KEYWORDS = [
+    "computer",
+    "information technology",
+    " it ",  # "IT" abbreviation — padded to avoid substring false positives
+    "software",
+    "engineering",
+    "stem",
+    "technology",
+    "data science",
+    "all course",
+    "any course",
+    "open to all",
+]
+
+_NON_CS_IT_KEYWORDS = [
+    "nurs",
+    "law ",
+    " law",
+    "medic",
+    "dental",
+    "pharmac",
+    "fine art",
+    "criminolog",
+    "journali",
+    "psycholog",
+    "social work",
+    "accountanc",
+    "hotel",
+    "tourism",
+    "culinar",
+    "agricultur",
+    "veterinar",
+    "education major",
+    "teacher education",
+    "liberal arts",
+]
+
+
+def _eligibility_excludes_cs_it(eligibility: list[str]) -> bool:
+    """Return True when eligibility clearly restricts to a non-CS/IT field.
+
+    Returns False (keep) when no non-CS keyword is found, or when a CS/IT
+    keyword co-occurs (benefit of the doubt for mixed-field listings).
+    """
+    joined = " " + " ".join(eligibility).lower() + " "
+    if any(kw in joined for kw in _CS_IT_KEYWORDS):
+        return False
+    return any(kw in joined for kw in _NON_CS_IT_KEYWORDS)
+
+
+def filter_ineligible(listings: list[dict]) -> list[dict]:
+    """Drop listings with post-enrichment expired deadlines or eligibility
+    constraints that restrict to a non-CS/IT course field."""
+    today = date.today().isoformat()
+    result = []
+    for listing in listings:
+        deadline = listing.get("deadline")
+        if deadline is not None and deadline < today:
+            logger.info(
+                f"filter_ineligible: dropping expired '{listing.get('title')}' (deadline {deadline})"
+            )
+            continue
+
+        eligibility = listing.get("eligibility") or []
+        if eligibility and _eligibility_excludes_cs_it(eligibility):
+            logger.info(
+                f"filter_ineligible: dropping non-CS/IT '{listing.get('title')}' (eligibility: {eligibility})"
+            )
+            continue
+
+        result.append(listing)
+    return result
+
+
 _SCORE_MODEL = "llama-3.3-70b-versatile"
 
 _SCORE_PROMPT = """Score this internship listing for the candidate below. Return ONLY a JSON object.

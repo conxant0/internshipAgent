@@ -350,3 +350,99 @@ def test_enrich_leaves_eligibility_absent_when_null():
     )):
         result = enrich_listings([listing])
     assert "eligibility" not in result[0]
+
+# ── filter_ineligible ─────────────────────────────────────────────────────────
+
+from agent.tools import filter_ineligible
+
+def test_filter_ineligible_keeps_no_eligibility():
+    listing = make_listing(eligibility=None)
+    result = filter_ineligible([listing])
+    assert len(result) == 1
+
+def test_filter_ineligible_keeps_cs_restriction():
+    listing = make_listing(eligibility=["BS Computer Science only"])
+    result = filter_ineligible([listing])
+    assert len(result) == 1
+
+def test_filter_ineligible_keeps_it_restriction():
+    listing = make_listing(eligibility=["BS Information Technology or BS Computer Science only"])
+    result = filter_ineligible([listing])
+    assert len(result) == 1
+
+def test_filter_ineligible_keeps_stem_restriction():
+    listing = make_listing(eligibility=["STEM students only"])
+    result = filter_ineligible([listing])
+    assert len(result) == 1
+
+def test_filter_ineligible_keeps_engineering_restriction():
+    listing = make_listing(eligibility=["Engineering students only"])
+    result = filter_ineligible([listing])
+    assert len(result) == 1
+
+def test_filter_ineligible_keeps_open_to_all():
+    listing = make_listing(eligibility=["open to all courses", "480 hours required"])
+    result = filter_ineligible([listing])
+    assert len(result) == 1
+
+def test_filter_ineligible_keeps_non_course_constraints():
+    listing = make_listing(eligibility=["480 hours required", "voluntary internship only"])
+    result = filter_ineligible([listing])
+    assert len(result) == 1
+
+def test_filter_ineligible_drops_nursing_only():
+    listing = make_listing(eligibility=["Nursing students only"])
+    result = filter_ineligible([listing])
+    assert len(result) == 0
+
+def test_filter_ineligible_drops_law_only():
+    listing = make_listing(eligibility=["Law students only"])
+    result = filter_ineligible([listing])
+    assert len(result) == 0
+
+def test_filter_ineligible_drops_accountancy_only():
+    listing = make_listing(eligibility=["Accountancy students only"])
+    result = filter_ineligible([listing])
+    assert len(result) == 0
+
+def test_filter_ineligible_drops_non_cs_with_other_constraints():
+    listing = make_listing(eligibility=["Nursing students only", "480 hours required"])
+    result = filter_ineligible([listing])
+    assert len(result) == 0
+
+def test_filter_ineligible_keeps_mixed_cs_and_non_cs():
+    # "IT or Nursing" — CS signal present, so benefit of the doubt
+    listing = make_listing(eligibility=["IT or Nursing students welcome"])
+    result = filter_ineligible([listing])
+    assert len(result) == 1
+
+def test_filter_ineligible_drops_post_enrichment_expired_deadline():
+    listing = make_listing(deadline="2000-01-01")
+    result = filter_ineligible([listing])
+    assert len(result) == 0
+
+def test_filter_ineligible_keeps_future_deadline():
+    listing = make_listing(deadline="2099-12-31")
+    result = filter_ineligible([listing])
+    assert len(result) == 1
+
+def test_filter_ineligible_keeps_null_deadline():
+    listing = make_listing(deadline=None)
+    result = filter_ineligible([listing])
+    assert len(result) == 1
+
+def test_filter_ineligible_empty_list():
+    result = filter_ineligible([])
+    assert result == []
+
+def test_filter_ineligible_mixed_batch():
+    listings = [
+        make_listing(title="CS Intern", eligibility=["BS Computer Science only"]),
+        make_listing(title="Nursing Intern", eligibility=["Nursing students only"]),
+        make_listing(title="Open Intern", eligibility=None),
+        make_listing(title="Expired Intern", deadline="2000-01-01"),
+    ]
+    result = filter_ineligible(listings)
+    assert len(result) == 2
+    titles = {r["title"] for r in result}
+    assert titles == {"CS Intern", "Open Intern"}
