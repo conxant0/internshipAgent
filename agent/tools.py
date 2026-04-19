@@ -268,6 +268,8 @@ def write_report(listings: List[dict], output_path: str = "") -> str:
         compensation = listing.get("compensation") or "Not specified"
         requirements = listing.get("requirements") or []
         summary      = listing.get("summary") or ""
+        if isinstance(summary, list):
+            summary = " ".join(str(s) for s in summary)
         rationale    = listing.get("rationale") or ""
         url          = listing.get("url") or "#"
 
@@ -282,7 +284,7 @@ def write_report(listings: List[dict], output_path: str = "") -> str:
             lines.append(f"Skills: {', '.join(str(r) for r in requirements)}")
         eligibility = listing.get("eligibility") or []
         if eligibility:
-            lines.append(f"Eligibility: {', '.join(eligibility)}")
+            lines.append(f"Eligibility: {', '.join(str(e) for e in eligibility)}")
         lines.append("")
         if summary:
             lines.append(summary)
