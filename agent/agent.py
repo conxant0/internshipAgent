@@ -155,6 +155,8 @@ def run(listings: list, profile: dict = None, preferences: dict = None):
                 return result
 
             current = result
+            if name in STAGE_ORDER:
+                _save_checkpoint(name, current)
             messages.append({
                 "role": "tool",
                 "tool_call_id": tc.id,

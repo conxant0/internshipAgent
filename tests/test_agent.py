@@ -83,3 +83,22 @@ def test_load_latest_checkpoint_returns_last_stage(tmp_path):
         stage, listings = _load_latest_checkpoint()
     assert stage == "enrich_listings"
     assert listings == [{"title": "B"}]
+
+
+def test_run_saves_checkpoint_after_each_stage(tmp_path):
+    responses = [
+        make_response(tool_calls=[make_tool_call("filter_expired", {})]),
+        make_response(tool_calls=[make_tool_call("write_report", {})]),
+    ]
+
+    output_file = str(tmp_path / "report.md")
+    with patch("agent.agent.chat", side_effect=responses), \
+         patch("agent.agent.tool_fns.filter_expired", return_value=SAMPLE_LISTINGS), \
+         patch("agent.agent.tool_fns.write_report", return_value=output_file), \
+         patch("agent.agent._CHECKPOINT_DIR", tmp_path):
+        from agent.agent import run
+        run(SAMPLE_LISTINGS)
+
+    assert (tmp_path / "filter_expired.json").exists()
+    saved = json.loads((tmp_path / "filter_expired.json").read_text())
+    assert saved == SAMPLE_LISTINGS
