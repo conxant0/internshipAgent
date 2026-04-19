@@ -39,6 +39,7 @@ def load_raw_data() -> list:
 def main():
     parser = argparse.ArgumentParser(description="Internship Agent")
     parser.add_argument("--skip-scrape", action="store_true", help="Skip scraping and use existing data in data/raw/")
+    parser.add_argument("--resume", action="store_true", help="Resume from last checkpoint instead of reprocessing from scratch")
     args = parser.parse_args()
 
     preferences_path = BASE / "data" / "preferences.json"
@@ -64,7 +65,7 @@ def main():
     logger.info(f"Running agent on {len(listings)} listings...")
 
     from agent.agent import run
-    report_path = run(listings, profile=profile, preferences=preferences)
+    report_path = run(listings, profile=profile, preferences=preferences, resume=args.resume)
 
     if report_path:
         logger.info(f"Done! Report saved to: {report_path}")
