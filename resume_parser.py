@@ -11,7 +11,7 @@ _PARSE_PROMPT = """Extract the following fields from this resume. Return ONLY a 
 Fields:
 - skills: list of technical skills, tools, and programming languages (e.g. ["Python", "SQL", "React"])
 - degree: degree program (e.g. "BS Computer Science") or null
-- year_level: current year level (e.g. "3rd year") or null
+- year_level: current year level as a string (e.g. "3rd year") or null. If not explicitly stated, infer from expected graduation date using today's date ({today}) and a standard 4-year program (e.g. graduating in 4 years from enrollment = 4th year).
 - experience_summary: 2-3 sentence summary of relevant experience and projects, or null
 
 Resume:
@@ -58,8 +58,9 @@ def parse_resume(data_dir: Path = None) -> dict:
             return json.load(f)
 
     resume_text = _extract_text(resume_path)
+    from datetime import date
     response = chat(
-        [{"role": "user", "content": _PARSE_PROMPT.format(resume_text=resume_text)}],
+        [{"role": "user", "content": _PARSE_PROMPT.format(resume_text=resume_text, today=date.today().isoformat())}],
         model=_PARSE_MODEL,
     )
     content = response.content.strip()
