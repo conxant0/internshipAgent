@@ -1,9 +1,39 @@
 import json
 import logging
+from pathlib import Path
 from agent.llm_client import chat
 import agent.tools as tool_fns
 
 logger = logging.getLogger(__name__)
+
+STAGE_ORDER = [
+    "filter_expired",
+    "fetch_descriptions",
+    "enrich_listings",
+    "filter_ineligible",
+    "score_listing",
+    "deduplicate",
+    "rank_listings",
+]
+
+_CHECKPOINT_DIR = Path(__file__).parent.parent / "data" / "checkpoints"
+
+
+def _save_checkpoint(stage: str, listings: list) -> None:
+    _CHECKPOINT_DIR.mkdir(parents=True, exist_ok=True)
+    with open(_CHECKPOINT_DIR / f"{stage}.json", "w", encoding="utf-8") as f:
+        json.dump(listings, f, indent=2)
+
+
+def _load_latest_checkpoint() -> tuple:
+    """Return (last_completed_stage, listings) or (None, None)."""
+    for stage in reversed(STAGE_ORDER):
+        path = _CHECKPOINT_DIR / f"{stage}.json"
+        if path.exists():
+            with open(path, encoding="utf-8") as f:
+                return stage, json.load(f)
+    return None, None
+
 
 SYSTEM_PROMPT = """You are an internship ranking agent.
 

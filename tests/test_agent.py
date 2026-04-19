@@ -1,5 +1,7 @@
 from unittest.mock import patch, MagicMock
 import json
+import tempfile
+from pathlib import Path
 
 SAMPLE_LISTINGS = [
     {
@@ -56,3 +58,28 @@ def test_agent_stops_if_no_tool_calls():
         result = run(SAMPLE_LISTINGS)
 
     assert result is None
+
+
+def test_save_checkpoint_creates_file(tmp_path):
+    with patch("agent.agent._CHECKPOINT_DIR", tmp_path):
+        from agent.agent import _save_checkpoint
+        _save_checkpoint("filter_expired", [{"title": "A"}])
+    assert (tmp_path / "filter_expired.json").exists()
+
+
+def test_load_latest_checkpoint_returns_none_when_empty(tmp_path):
+    with patch("agent.agent._CHECKPOINT_DIR", tmp_path):
+        from agent.agent import _load_latest_checkpoint
+        stage, listings = _load_latest_checkpoint()
+    assert stage is None
+    assert listings is None
+
+
+def test_load_latest_checkpoint_returns_last_stage(tmp_path):
+    (tmp_path / "filter_expired.json").write_text(json.dumps([{"title": "A"}]))
+    (tmp_path / "enrich_listings.json").write_text(json.dumps([{"title": "B"}]))
+    with patch("agent.agent._CHECKPOINT_DIR", tmp_path):
+        from agent.agent import _load_latest_checkpoint, STAGE_ORDER
+        stage, listings = _load_latest_checkpoint()
+    assert stage == "enrich_listings"
+    assert listings == [{"title": "B"}]
