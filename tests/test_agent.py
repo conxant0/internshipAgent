@@ -102,3 +102,45 @@ def test_run_saves_checkpoint_after_each_stage(tmp_path):
     assert (tmp_path / "filter_expired.json").exists()
     saved = json.loads((tmp_path / "filter_expired.json").read_text())
     assert saved == SAMPLE_LISTINGS
+
+
+def test_run_resumes_from_checkpoint_skips_completed_stage(tmp_path):
+    (tmp_path / "filter_expired.json").write_text(json.dumps(SAMPLE_LISTINGS))
+
+    responses = [
+        make_response(tool_calls=[make_tool_call("filter_expired", {})]),
+        make_response(tool_calls=[make_tool_call("write_report", {})]),
+    ]
+
+    output_file = str(tmp_path / "report.md")
+    filter_mock = MagicMock(return_value=SAMPLE_LISTINGS)
+
+    with patch("agent.agent.chat", side_effect=responses), \
+         patch("agent.agent.tool_fns.filter_expired", filter_mock), \
+         patch("agent.agent.tool_fns.write_report", return_value=output_file), \
+         patch("agent.agent._CHECKPOINT_DIR", tmp_path):
+        from agent.agent import run
+        result = run(SAMPLE_LISTINGS, resume=True)
+
+    filter_mock.assert_not_called()
+    assert result == output_file
+
+
+def test_run_resume_with_no_checkpoint_falls_back_to_normal(tmp_path):
+    responses = [
+        make_response(tool_calls=[make_tool_call("filter_expired", {})]),
+        make_response(tool_calls=[make_tool_call("write_report", {})]),
+    ]
+
+    output_file = str(tmp_path / "report.md")
+    filter_mock = MagicMock(return_value=SAMPLE_LISTINGS)
+
+    with patch("agent.agent.chat", side_effect=responses), \
+         patch("agent.agent.tool_fns.filter_expired", filter_mock), \
+         patch("agent.agent.tool_fns.write_report", return_value=output_file), \
+         patch("agent.agent._CHECKPOINT_DIR", tmp_path):
+        from agent.agent import run
+        result = run(SAMPLE_LISTINGS, resume=True)
+
+    filter_mock.assert_called_once()
+    assert result == output_file

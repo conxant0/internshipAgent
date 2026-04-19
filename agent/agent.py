@@ -70,8 +70,16 @@ TOOLS = [
     _no_params("write_report", "Write the final ranked report to output/report.md. Call this when all processing is done."),
 ]
 
-def run(listings: list, profile: dict = None, preferences: dict = None):
+def run(listings: list, profile: dict = None, preferences: dict = None, resume: bool = False):
     current = listings  # we track state; LLM only sees summaries
+    completed_stages: set = set()
+
+    if resume:
+        last_stage, saved = _load_latest_checkpoint()
+        if last_stage:
+            current = saved
+            completed_stages = set(STAGE_ORDER[: STAGE_ORDER.index(last_stage) + 1])
+            logger.info(f"Resuming from checkpoint after '{last_stage}' ({len(current)} listings)")
 
     _profile = profile or {}
     _preferences = preferences or {}
@@ -86,6 +94,12 @@ def run(listings: list, profile: dict = None, preferences: dict = None):
         "rank_listings":      lambda lst: tool_fns.rank_listings(lst),
         "write_report":       lambda lst: tool_fns.write_report(lst),
     }
+
+    for stage in completed_stages:
+        if stage in tool_map:
+            tool_map[stage] = lambda lst, s=stage: (
+                logger.info(f"Skipping '{s}' — already completed (checkpoint)") or lst
+            )
 
     summary = [
         {"title": l.get("title"), "company": l.get("company"), "deadline": l.get("deadline")}
