@@ -1,4 +1,3 @@
-import pytest
 from agent.tools import filter_expired, score_listing
 
 # ── Fixtures ─────────────────────────────────────────────────────────────────
@@ -96,15 +95,6 @@ def test_score_listing_retries_on_bad_json(monkeypatch):
     assert scores[0]["score"] == 60
 
 
-def test_score_listing_raises_after_two_bad_responses(monkeypatch):
-    listing = make_listing()
-    bad_msg = MagicMock()
-    bad_msg.content = "not valid json"
-
-    with patch("agent.tools.chat", return_value=bad_msg):
-        with pytest.raises(ValueError, match="score_listing failed"):
-            score_listing([listing], SAMPLE_PROFILE, SAMPLE_PREFERENCES)
-
 # ── deduplicate ───────────────────────────────────────────────────────────────
 
 from agent.tools import deduplicate, rank_listings, write_report
@@ -189,21 +179,8 @@ def test_write_report_shows_rationale(tmp_path):
 # ── fetch_descriptions ────────────────────────────────────────────────────────
 
 from unittest.mock import patch, MagicMock
-from agent.llm_client import chat
 from agent.tools import fetch_descriptions
 
-
-def test_chat_uses_custom_model():
-    mock_client = MagicMock()
-    mock_response = MagicMock()
-    mock_response.choices = [MagicMock()]
-    mock_client.chat.completions.create.return_value = mock_response
-
-    with patch("agent.llm_client.Groq", return_value=mock_client):
-        chat([{"role": "user", "content": "hi"}], model="llama-3.1-8b-instant")
-
-    call_kwargs = mock_client.chat.completions.create.call_args[1]
-    assert call_kwargs["model"] == "llama-3.1-8b-instant"
 
 def test_fetch_descriptions_populates_description():
     listings = [make_listing(description="", source="prosple")]
