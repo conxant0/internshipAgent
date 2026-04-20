@@ -7,46 +7,40 @@
     "compensation": "Paid \u2014 PHP 3215/weekly",
     "description": "Job Description Equinix is the world\u2019s digital infrastructure company, operating 270+ data centers across the globe and providing interconnections to all the key clouds and networks. Businesses need one place to simplify and bring together fragmented, complex infrastructure that spans private and public cloud environments. Our global platform allows customers to place infrastructure wherever they need it and connect it to everything they need to succeed. At Equinix, we help the world\u2019s digital leaders scale with agility, speed the launch of digital services, deliver world-class experiences, and transform people\u2019s lives. Our culture is based on collaboration and the growth and development of our teams. We hire hardworking people who thrive on solving challenging problems and give them opportunities to hone new skills, and try new approaches, as we grow our product portfolio with new software and network architecture solutions. We embrace diversity in thought and contribution and are committed to providing an equitable work environment. that is foundational to our core values as a company and is vital to our success. Job Summary The Service Management team is responsible for ensuring reliable delivery and performance of infrastructure and data center services within the scope of the Customer Success function, meeting contractual SLAs and regulatory obligations. This role supports operational excellence by assisting with communication during service disruptions and providing advance notice of upcoming maintenance and potential impacts\u2014often through structured operational reviews. Responsibilities Operational Oversight Supports audits and walkthroughs, coordinates post-RFS responsibilities, and assists with snag resolution. Ensures smooth coordination and implementation of operational requests as they arise, working with relevant teams to minimize disruption and maintain service standards. Issue & Escalation Management: Assesses issue/escalation to validate, prioritize and progress accordingly. Ensure adherence to standard operating procedures, policies/rules/restrictions and resolve customer issues and escalations. Engage stakeholders and conduct postmortem analyses. Service Communication & Operational Reviews Assists with communication during service disruptions, ensuring customers and internal teams receive timely and clear updates. Provide proactive heads-up notifications about forthcoming maintenance activities and any potential impact these may have \u2013 mostly delivered through structured operational reviews, where service performance, upcoming changes, and improvement opportunities are discussed with customers and internal stakeholders. What you will learn and grow Strong understanding of data center operations and infrastructure services Full familiarity with the Customer Success function, its scope, and responsibilities Experience working within account teams to align overall service management with customer and business objectives Who you are: Final Year students or on track to graduate with Full-time bachelor\u2019s degree in late 2026 till Mid 2027 Residing in Metro Manila during internship period Proven ability to manage service issue coordination and compliance requirements Enjoy problem solving and confidence in verbal engagement Outcome Driven: Focused on delivering measurable results Additional advantage: Proficient in Chinese/Japanese/Korean",
     "requirements": [
-      "data center operations",
-      "infrastructure services",
-      "Customer Success function",
-      "account teams",
-      "service management"
+      "English",
+      "Chinese/Japanese/Korean"
     ],
     "source": "prosple",
     "url": "https://ph.prosple.com/graduate-employers/equinix-philippines/jobs-internships/paid-voluntary-internship-customer-success-intern-chinesejapanesekorean-speaking",
+    "summary": "This role supports operational excellence by assisting with communication during service disruptions and providing advance notice of upcoming maintenance and potential impacts.",
     "eligibility": [
-      "students or graduate between late 2026 and mid 2027",
-      "residing in Metro Manila during internship period"
+      "On track to graduate with Full-time bachelor's degree in late 2026 till Mid 2027",
+      "Residing in Metro Manila during internship period",
+      "Final Year students"
     ],
-    "score": 22,
-    "rationale": "The internship listing does not match the candidate's target role of Software Engineer, and the required skills do not align with the candidate's existing skills, resulting in a low score for skills match and role relevance. Additionally, the location is onsite in Metro Manila, which is not the candidate's preferred location of Cebu, contributing to a reduced location score. The internship is paid, but other factors outweigh the compensation score."
+    "score": 32,
+    "rationale": "The candidate's skills do not closely match the internship requirements, and the location is not preferred, resulting in lower scores for skills match and location. However, the candidate meets some eligibility criteria, such as being a student, but not all, like residing in Metro Manila. The internship is paid, but the role relevance is not high as it is a Customer Success Intern role rather than a Software Engineer role."
   },
   {
     "title": "Academy Program for Site Reliability Engineer",
     "company": "OpsWerks",
-    "location": "Cebu City, Philippines",
+    "location": "Cebu Office, Cebu City, Philippines",
     "deadline": "2027-03-10",
-    "compensation": "competitive industry allowance",
+    "compensation": "competitive industry allowance recognizing your contribution and supports your financial needs during the program, with 1 day of paid sick leave per month and paid certification opportunities",
     "description": "Stages of Internship: A.\u00a02-3 Month Academy Internship 3-6 Weeks Foundational Courses (First Term) Midpoint Assessment 3-6 Weeks Advance Courses (Second Term) Onsite Cebu Office. Capstone Project and Presentation Final Assessment and Graduation B.\u00a03-Month Pre-Production (Onsite Cebu Office) Real-world application of the technical learnings from the Internship. Receive Platform, System, and Service Delivery training. Continuous tech stack upskilling. Pass Certified Kubernetes Administrator (CKA) Certification Light to medium interaction with partners. C.\u00a0 Final Assessment and Transition to Full-time Consultant. Benefits Hybrid 2 to 3-Month online and in-person technical training and hands-on exercises : Throughout the internship, you will receive a specially curated site reliability engineering (SRE) tool stack and hands-on exposure to the newest technologies used by hypergrowth technology companies. Learn and get paid : We value your dedication and commitment to learning. As an intern, you will receive a competitive industry allowance that recognizes your contribution and supports your financial needs during the program. This allowance ensures that you can focus on your growth and development without any financial concerns. Paid Certification : We believe in investing in your professional development. As an Academy Intern, you will have the opportunity to earn industry-recognized certifications relevant to your field of expertise. These certifications will not only enhance your resume but also validate your skills and knowledge, boosting your credibility in the competitive job market. Paid Sick Leaves : We understand the importance of maintaining a healthy work-life balance. If you pass the 3-month internship and level up to the 3-month boot camp, you will have access to paid sick leaves, allowing you to take time off when not feeling 100%. You will be given 1 day of paid sick leave per month. Service laptop : Once you complete the first term of the internship, you will be granted free use of a MacBook service unit. Be a Full-time OpsWerks Consultant : Your hard work and dedication can open doors to exciting career opportunities. Exceptional interns who demonstrate outstanding skills, adaptability, and a strong work ethic may be offered a full-time position within our esteemed organization upon successfully completing the coursework and requirements of the internship and apprenticeship (pre-production) program. Seize this chance to secure a promising engineering career path in a high-technology industry. Your Responsibilities As an intern, you need to learn and understand all the subjects included in the Academy Syllabus. There will be a Team Leader who will provide guidance, motivation, and support throughout your journey. Coaches of the Academy Faculty will also be there to help you understand the subjects, set goals, and identify resources to help you succeed. Therefore, as an intern, you are expected to: Comply with the behavioural and technical guidelines set in The Academy. Complete and present all assigned projects, tasks, and case studies with relevance and exploratory depth. Build healthy relationships among other interns through active involvement in all group activities, troubleshooting, and issue resolution. About You Batch 2024-2025 B.S. Computer Engineering graduate, Information Technology, Systems, or other related engineering discipline from a reputable school in Visayas or Mindanao. Those with prior experience in a technical field with less than 2 years of working experience will have a head start. Possess a foundational understanding of operating systems, networking concepts, and cloud computing. Familiarity with programming languages like C++, Python, or BASH shell scripting. Have the ability to maintain composure in high-pressure situations to demonstrate resilience and critical thinking skills. Work best as part of a team. Have a genuine thirst for learning and personal growth. Be agreeable to completing the learning objectives at night or daytime.",
     "requirements": [
-      "operating systems",
-      "networking concepts",
-      "cloud computing",
       "C++",
       "Python",
       "BASH shell scripting"
     ],
     "source": "prosple",
     "url": "https://ph.prosple.com/graduate-employers/opswerks/jobs-internships/academy-program-for-site-reliability-engineer-1",
-    "summary": "Learn and understand all the subjects included in the Academy Syllabus. Complete and present all assigned projects, tasks, and case studies with relevance and exploratory depth. Build healthy relationships among other interns through active involvement in all group activities, troubleshooting, and issue resolution.",
+    "summary": "Learn and understand all the subjects included in the Academy Syllabus, complete and present all assigned projects, tasks, and case studies, build healthy relationships among other interns.",
     "eligibility": [
-      "B.S. Computer Engineering graduate",
-      "Information Technology, Systems, or other related engineering discipline from a reputable school in Visayas or Mindanao",
-      "prior experience in a technical field with less than 2 years of working experience"
+      "B.S. Computer Engineering graduate from a reputable school in Visayas or Mindanao, Less than 2 years of working experience"
     ],
     "score": 87,
-    "rationale": "The candidate's skills match the listing's requirements well, with proficiency in Python, C/C++, and cloud computing, earning 20 out of 25 points. The role relevance score is 16 out of 20, as the listing is for a Site Reliability Engineer, which is related to but not exactly the candidate's target role of Software Engineer. The candidate meets the eligibility and location requirements, and the internship is paid, resulting in high scores for those categories."
+    "rationale": "The candidate's skills match the listing's requirements, with proficiency in Python and other relevant technologies, and the role is relevant to their target role as a Software Engineer. The candidate also meets the eligibility requirements, is a good location fit, and the internship is paid, contributing to the high score. However, the listing's specific requirements for a Computer Engineering graduate may not perfectly align with the candidate's Computer Science degree."
   },
   {
     "title": "Student Engineer",
@@ -56,40 +50,40 @@
     "compensation": "Paid \u2014 PHP 12000/monthly",
     "description": "Are you ready to kickstart your career adventure? Aurecon's paid Internship Programme offers the perfect opportunity to explore your potential while gaining valuable skills and experiences. We believe every career should be a rewarding adventure. The Opportunity: Available positions in Civil Engineering in Aurecon Manila. Teams focused on Transport , Water , Land Infrastructure , and Advisory. Offering a potential pathway to the Aurecon 2027 Graduate Programme. What You'll Experience: You\u2019ll get the opportunity to see what your career could look like, expand your knowledge and be immersed in our supportive and inclusive teams. You'll be encouraged to step outside your comfort zone, build your own network and experiment with different pathways you might pursue after finishing your degree. Real-life projects at the forefront of innovation and sustainability Engaging interactive learning experiences and the opportunity to flex your creative skills during the 'Intern Innovation Challenge\u2019 Access to mentors and networking opportunities through Limelight, our early careers professional network Flexible and hybrid work set-up for improved productivity and work-life balance Internships often serve as a pathway to our graduate programme for faster career advancement What We're Looking For: Studying a Bachelor of Civil or Structural Engineering or related degree Passion for carbon neutrality and sustainability Strong relationship-building skills and a mindset to push boundaries Enthusiasm for learning and owning your career adventure How to Apply: Application - apply with your CV, cover letter and transcript, and identify the teams you are most interested in Interview - if selected, you'll be invited for an interview with the team People who work at Aurecon are not like everyone else. We look at the world differently. But we also share a lot in common. A spirit of adventure. A sense of wonder and endless possibility. And hardwired in our DNA is the need to leave a positive legacy. We are a design, engineering and advisory company with 7,800 experts in 11 locations across Asia Pacific. Our purpose is bringing ideas to life, to imagine and co-create with our clients a better future for people and the planet. Joining Aurecon means you\u2019ll be at the award-winning edge of innovation and sustainability; in 2024 we won AFR\u2019s Most Popular Engineering Employer, and Prosple\u2019s #1 Overall Best Graduate Employer in Aotearoa New Zealand, and we are ranked as a leading environmental and sustainable consultancy in the Environment Analyst's Global Competitor Analysis report. Feeling Adventurous? Then please apply. Your background, unique needs and individuality will be valued. Visit our website to learn more at www.aurecongroup.com.",
     "requirements": [
-      "Bachelor of Civil or Structural Engineering"
+      "Engineering & Mathematics"
     ],
     "source": "prosple",
     "url": "https://ph.prosple.com/graduate-employers/aurecon-ph/jobs-internships/student-engineer-0",
+    "summary": "You\u2019ll get the opportunity to see what your career could look like, expand your knowledge and be immersed in our supportive and inclusive teams.",
     "eligibility": [
       "Studying a Bachelor of Civil or Structural Engineering or related degree",
       "Passion for carbon neutrality and sustainability",
-      "Strong relationship-building skills"
+      "Strong relationship-building skills and a mindset to push boundaries",
+      "Enthusiasm for learning and owning your career adventure"
     ],
-    "score": 2,
-    "rationale": "The candidate's skills and degree do not match the listing's requirements, which are focused on Civil or Structural Engineering, resulting in low scores for skills match and eligibility fit. The location also does not match the candidate's preference for Cebu, and the role is not relevant to the candidate's target role of Software Engineer. However, the internship is paid, which contributes a small portion to the overall score."
+    "score": 12,
+    "rationale": "The candidate's skills and degree do not align with the internship requirements, which are focused on Civil or Structural Engineering, resulting in low scores for skills match and eligibility fit. The location is also not a match, as the candidate prefers Cebu but the internship is in Pasig City, although it does offer a hybrid work setup. The internship is paid, which contributes to the overall score."
   },
   {
     "title": "IT Intern",
     "company": "Integrated Computer Systems",
     "location": "Greenhills, San Juan City",
     "deadline": "2026-04-29",
-    "compensation": "PHP paid",
+    "compensation": "Paid \u2014 PHP 5000\u20137000/monthly",
     "description": "Responsibilities: Asset Management and Deployment: Re/building and configuring laptops/desktops for new hires and re-issue Assist network and hardware troubleshooting Install and configure computer hardware operating systems and applications. Requirements: Currently taking Information Technology, Computer Engineering, Electronics and Communications Engineering or any IT related course Must be a school requirement internship. Can render a minimum of 300 hours Can work on-site in Greenhills, San Juan City Can start immediately. This is a paid internship that offers a great opportunity to kickstart your career with one of the leading IT solutions companies in the Philippines.",
     "requirements": [
-      "Python",
-      "SQL",
-      "Computer Engineering",
-      "Electronics and Communications Engineering"
+      "IT & Computer Science"
     ],
     "source": "prosple",
     "url": "https://ph.prosple.com/graduate-employers/integrated-computer-systems/jobs-internships/it-intern-0",
-    "summary": "Re/building and configuring laptops/desktops for new hires, asset management, network and hardware troubleshooting, installing and configuring operating systems and applications.",
     "eligibility": [
+      "Currently taking Information Technology, Computer Engineering, Electronics and Communications Engineering or any IT related course",
       "Must be a school requirement internship",
-      "Can render a minimum of 300 hours"
+      "Can render a minimum of 300 hours",
+      "Can work on-site"
     ],
-    "score": 47,
-    "rationale": "The candidate's skills match the listing's requirements moderately, with Python and SQL being relevant skills, but the role's focus on hardware and network troubleshooting doesn't align with the candidate's experience as a backend developer. The candidate doesn't meet the eligibility requirements since they're not a student and it's not a school requirement internship. The location is also not preferred, being onsite in San Juan City, and the compensation is paid, which adds to the score."
+    "score": 57,
+    "rationale": "The candidate's skills do not closely match the listing's requirements, focusing more on software development rather than IT and computer hardware management, resulting in a low skills match score. However, the candidate meets the eligibility requirements and the internship is paid, contributing to a moderate overall score. The location is a major drawback, as the candidate prefers Cebu but the internship is onsite in San Juan City, limiting the location score to 10 points."
   },
   {
     "title": "Associate, Internship",
@@ -99,64 +93,67 @@
     "compensation": null,
     "description": "Work alongside top minds on diverse consulting projects that reshape business, government, and society at BCG. Your Role Here\u2019s what you will be doing: Work alongside full-time staff on varied and rigorous consulting projects, often at client sites. Collaborate with team members from diverse backgrounds and disciplines. Engage in projects of varying length, size, and location depending on client challenges. Develop understanding of complex business problems from multiple perspectives. Gain new skills and experience to support future career growth at BCG or beyond. About You The company is looking for: Penultimate year students graduating in 2027 only. Outstanding academic performance and strong extracurricular record. Strong research and analysis experience, including excellent Excel skills. Ability to work creatively and analytically. Excellent communication and interpersonal skills. Applicants must already have the applicable permit/visa to undertake the internship. Benefits Medical, dental, and vision coverage. Telemedicine services. Life, accident, and disability insurance. Parental leave and family planning benefits. Caregiving resources and mental health offerings. Generous retirement program and financial guidance. Paid time off and more. This job may close before the stated closing date. You are encouraged to apply as soon as possible. Report this job",
     "requirements": [
-      "Business & Management"
+      "Excel"
     ],
     "source": "prosple",
     "url": "https://ph.prosple.com/graduate-employers/boston-consulting-group-philippines/jobs-internships/associate-internship-3",
-    "summary": "Work alongside full-time staff on varied and rigorous consulting projects, often at client sites. Collaborate with team members from diverse backgrounds and disciplines, engage in projects of varying length, size, and location depending on client challenges.",
+    "summary": "Work alongside full-time staff on varied and rigorous consulting projects, often at client sites. Collaborate with team members from diverse backgrounds and disciplines. Engage in projects of varying length, size, and location depending on client challenges.",
     "eligibility": [
-      "Penultimate year students graduating in 2027 only",
-      "Applicants must already have the applicable permit/visa to undertake the internship"
+      "Penultimate year students",
+      "Graduating in 2027 only",
+      "Applicable permit/visa"
     ],
-    "score": 27,
-    "rationale": "The candidate's skills do not match the listing's requirements, which focuses on business and management, resulting in a low skills match score. The role relevance is also low since the listing is for a consulting internship, not a software engineering role. The candidate meets some eligibility requirements but not all, and the location is not preferred, further reducing the overall score."
+    "score": 37,
+    "rationale": "The candidate's skills do not align well with the listing's requirements, which focuses on consulting and Excel skills, resulting in a low skills match score. The role is also not relevant to the candidate's target role as a Software Engineer, and the location is not the preferred Cebu. However, the internship is paid, which contributes to the overall score."
   },
   {
     "title": "Human Resources Intern (Immediate Hire)",
     "company": "MicroSourcing",
-    "location": "MOA or Eastwood",
+    "location": "Philippines",
     "deadline": null,
-    "compensation": "Above-market compensation and benefits package, including performance bonuses and flexible work arrangements",
+    "compensation": "Above-market compensation",
     "description": "Support recruitment and sourcing activities at MicroSourcing, a leading offshore managed services provider in the Philippines. Your Role Key responsibilities include: Act as a support to sourcing/recruitment related activities Support recruitment processes, including test administration Perform other ad-hoc sourcing related tasks Source candidates for various hiring requests Conduct call outs Coordinate interview schedules with Recruiters Lead generation through job boards, social media, and other sourcing channels Monitor and update various databases Assist with internal and external events About You The company is looking for: Good communication skills Proficient in using MS Office applications Amenable to work in MOA or Eastwood Compensation & Benefits Above-market compensation Healthcare coverage on day one, including for one or more dependents Paid time off with cash conversion Group life insurance Performance bonuses Flexible work arrangements Participation in company-sponsored events and activities Training & Development Continuous learning and career advancement opportunities are provided. Career Progression Opportunities for career growth within the company. This job may close before the stated closing date, you are encouraged to apply as soon as possible Report this job",
     "requirements": [
-      "MS Office",
-      "Good communication skills"
+      "MS Office"
     ],
     "source": "prosple",
     "url": "https://ph.prosple.com/graduate-employers/microsourcing/jobs-internships/human-resources-intern-immediate-hire",
-    "summary": "Support recruitment and sourcing activities, including sourcing candidates, test administration, and coordinating interview schedules.",
+    "summary": "Perform sourcing and recruitment activities including test administration, candidate sourcing, and database maintenance.",
     "score": 12,
-    "rationale": "The internship listing scores low due to a poor skills match, as the candidate's technical skills do not align with the Human Resources Intern role, and the role is not relevant to the candidate's target role of Software Engineer. However, the listing does offer paid compensation, contributing 15 points to the score, but this is outweighed by the other factors. The location also scores low since it is not in Cebu and not remote."
+    "rationale": "The candidate's skills do not align with the listing's requirements, and the role is not relevant to their target role as a Software Engineer. However, the location and compensation aspects partially fit the candidate's preferences, with the internship being based in the Philippines, albeit not specifically in Cebu, and offering paid compensation."
   },
   {
     "title": "Data Scientist Intern",
     "company": "Foundry for Good Philippines",
     "location": null,
     "deadline": null,
-    "compensation": "PHP 60000 upon completion",
+    "compensation": "60,000 pesos upon successful completion",
     "description": "Data Scientist Intern role focused on building predictive models and actionable insights in a fast-paced startup environment. Your Role Here\u2019s what you will be doing: Building lead scoring models. Developing lookalike models to identify high-fit organizations. Turning messy data into usable, structured insights. Exploring predictive approaches such as classification, clustering, and KNN. Delivering models that improve lead prioritization and integrate into product or sales workflows. About You The company is looking for: Strong skills in Python and/or SQL with solid understanding of modeling techniques (regression, classification, clustering, etc.). A practical, impact-driven mindset with experience working on real, messy datasets beyond academic examples. A \"ship-first\" builder mentality focused on creating usable, real-world outputs. High autonomy and action-oriented approach, able to move from raw data to insight to usable output. Applied experience building and deploying models or working with scraped data. End-to-end execution capability with commercial understanding of data\u2019s business impact. A hacker mindset comfortable with fast-paced, challenging environments. Work hours aligned with UK time zone (4:00pm-12:00am PH time). Compensation & Benefits Paid stipend of 60,000 pesos upon successful completion. Remote work with flexible, high-autonomy setup. Fast-paced startup environment focused on shipping results. Career Progression Potential to convert to full-time employment after internship. How to Apply Click the\" Apply\u00a0on employer site\" button on this page. Submit CV and GitHub portfolio. Complete interview process including a short technical or take-home task. This job may close before the stated closing date. You are encouraged to apply as soon as possible. Report this job",
     "requirements": [
       "Python",
       "SQL",
-      "regression",
-      "classification",
-      "clustering"
+      "Regression",
+      "Classification",
+      "Clustering",
+      "KNN",
+      "GitHub"
     ],
     "source": "prosple",
     "url": "https://ph.prosple.com/graduate-employers/foundry-for-good-philippines/jobs-internships/data-scientist-intern",
-    "summary": "Building lead scoring models, developing lookalike models, turning messy data into usable, structured insights, exploring predictive approaches, delivering models that improve lead prioritization and integrate into product or sales workflows.",
+    "summary": "Building lead scoring models, developing lookalike models, turning messy data into usable insights, exploring predictive approaches, delivering models that improve lead prioritization and integrate into product or sales workflows",
     "eligibility": [
-      "480 hours (aligned with UK time zone, 4:00pm-12:00am PH time)"
+      "Work hours aligned with UK time zone (4:00pm-12:00am PH time)",
+      "Remote work with flexible, high-autonomy setup"
     ],
-    "score": 44,
-    "rationale": "The candidate's skills match the listing's requirements to some extent, with Python and SQL being relevant, but the role is focused on data science which is not the candidate's target role as a Software Engineer. The location and compensation aspects are favorable, but the role relevance and eligibility fit are not ideal, resulting in a moderate score. The candidate meets some eligibility requirements but the work hours are not favorable, further reducing the score."
+    "score": 67,
+    "rationale": "The candidate's skills in Python and SQL are a good match for the Data Scientist Intern role, but the role's focus on data science and modeling techniques may not align perfectly with their software engineering background and experience. The remote work setup and paid stipend are positives, but the work hours aligned with the UK time zone may not be ideal. Overall, the candidate meets some but not all of the eligibility and role requirements."
   },
   {
     "title": "Operations and Management Intern",
     "company": "AHEAD Tutorial and Review Center",
     "location": "Quezon City, Philippines",
     "deadline": null,
-    "compensation": "PHP 100 upon completion + PHP 100 transport allowance",
+    "compensation": "PHP 100/day, \u20b1100 transport allowance per onsite workday, Certificate of Completion upon successful internship completion, Certificates for each seminar attended",
     "description": "AHEAD Education Group seeks proactive Operations and Management Interns for a flexible, hybrid internship to gain professional experience. Your Role Here\u2019s what you will be doing: Support operations and management tasks within the company Collaborate with teams to gain practical experience in business and operations management Fulfill school-required internship hours (minimum 300 hours) About You The company is looking for: Currently undergraduate students of Business Management, Operations Management, Industrial Engineering, or any relevant course Preferably with experience relevant to the position Available to start ASAP Can render a minimum of 300 internship hours Strong communication and interpersonal skills Commitment to excellence Passion for learning new skills and fostering good relations Proactive and self-starting attitude Compensation & Benefits Flexible work arrangements (Work-from-home/Hybrid) Minimum of 4 hours per day with flexible scheduling Supportive and positive work culture Certificate of Completion upon successful internship completion Certificates for each seminar attended to boost resumes Leadership training and opportunities to lead a team \u20b1100 transport allowance per onsite workday, accumulated and paid upon internship completion Memorandum of Agreement (MOA) signing to meet school internship requirements Training & Development Mentorship and professional growth opportunities Leadership training for all interns How to Apply Interested candidates should email inquiries to careers@ahead.edu.ph. This job may close before the stated closing date, you are encouraged to apply as soon as possible Report this job",
     "requirements": [
       "Business Management",
@@ -165,60 +162,58 @@
     ],
     "source": "prosple",
     "url": "https://ph.prosple.com/graduate-employers/ahead-tutorial-and-review-center/jobs-internships/operations-and-management-intern",
-    "summary": "Support operations and management tasks within the company; Collaborate with teams to gain practical experience in business and operations management",
+    "summary": "Support operations and management tasks, collaborate with teams, and fulfill school-required internship hours.",
     "eligibility": [
       "Currently undergraduate students",
       "Available to start ASAP",
-      "Render a minimum of 300 internship hours",
-      "Available to start ASAP"
+      "Available to render a minimum of 300 internship hours"
     ],
-    "score": 2,
-    "rationale": "The candidate's skills do not match the listing's requirements, which are focused on business and operations management, and the role is not relevant to the candidate's target role of Software Engineer. Additionally, the listing is onsite in Quezon City, which is not the candidate's preferred location of Cebu, and the compensation is minimal, with only a transport allowance provided. The only minor point earned is for the international onsite score, but since it's within the PH, it would score slightly higher if the city matched or was remote, but since the role and skills are the main issues, it remains low."
+    "score": 32,
+    "rationale": "The candidate's skills do not align with the listing's requirements, and the role is not relevant to their target role as a Software Engineer. However, the candidate meets the eligibility requirements and the location, although not preferred, still earns some points as it is within the Philippines. The unpaid compensation also reduces the overall score."
   },
   {
     "title": "AI Engineer Intern",
     "company": "Foundry for Good Philippines",
     "location": null,
     "deadline": null,
-    "compensation": "60,000 pesos upon successful completion",
+    "compensation": "PHP 60,000 upon successful completion",
     "description": "Build AI agents to automate research tasks and ship production-level systems in a fast-paced startup environment. Your Role Here\u2019s what you will be doing: Build AI agents that email organizations and parse responses. Create voice agents that call organizations to collect missing data. Develop automated workflows to replace human research tasks. Build systems that collect proprietary data at scale.. Ship real systems used in production by week 2-4 About You The company is looking for: A builder ready to move beyond the classroom with original AI projects, agents, or tools (portfolio or GitHub required). Technical curiosity and comfort working with APIs (e.g., LLMs like Anthropic/OpenAI). Self-direction and initiative to figure things out without step-by-step instructions. Ability to ship fast and experiment in a high-autonomy startup environment. Experience building and shipping AI agents or side projects end-to-end. Experience working with messy, real-world data or web scraping. Startup/hacker mindset and passion for the future of AI. Compensation & Benefits Paid stipend of 60,000 pesos upon successful completion. Remote work with 1\u20132 check-ins per week, otherwise asynchronous. High autonomy in a fast-paced, experimental environment. Work hours during UK hours (4:00pm-12:00am PH time). Career Progression Potential to convert to full-time after internship. How to Apply Click the\" Apply\u00a0on employer site\" button on this page. Submit CV, GitHub link, and answers to application questions. Complete a short interview. Complete a technical take-home task. This job may close before the stated closing date. You are encouraged to apply as soon as possible. Report this job",
     "requirements": [
-      "LLMs (e.g., Anthropic/OpenAI)",
-      "APIs",
-      "AI agents",
-      "web scraping",
-      "messy, real-world data"
+      "LLMs like Anthropic/OpenAI",
+      "GitHub",
+      "APIs"
     ],
     "source": "prosple",
     "url": "https://ph.prosple.com/graduate-employers/foundry-for-good-philippines/jobs-internships/ai-engineer-intern",
-    "summary": "Build AI agents to automate research tasks and ship production-level systems in a fast-paced startup environment. Develop automated workflows to replace human research tasks.",
-    "score": 67,
-    "rationale": "The candidate's skills, such as Python, JavaScript, and experience with APIs, partially align with the listing's requirements, but lack direct experience with AI agents, LLMs, and web scraping. The role is relevant to the candidate's target role as a Software Engineer, and the paid stipend and remote work arrangement are beneficial. However, the location is unspecified, which may not perfectly match the candidate's preference for Cebu, and the work hours are based on UK time."
+    "summary": "Build AI agents to automate research tasks and ship production-level systems. Develop automated workflows to replace human research tasks. Ship real systems used in production within 2-4 weeks.",
+    "score": 82,
+    "rationale": "The candidate's skills in programming languages and experience in building scalable backend systems partially align with the AI Engineer Intern role, and the paid stipend and remote work arrangement are favorable, but the candidate's skills do not exactly match the required experience with LLMs and AI agents, and the location is not specified but the work hours suggest it may not be based in Cebu."
   },
   {
     "title": "Corporate Affairs Intern",
     "company": "BeOne Medicines",
     "location": "United States (Remote)",
     "deadline": "2026-05-17",
-    "compensation": "USD 27/hour, with possibility of annual bonus, discretionary equity awards and Employee Stock Purchase Plan",
+    "compensation": "USD 27/hour",
     "description": "BeOne seeks an Advocacy-Policy Intern to support patient advocacy, policy research, and alliance development in a dynamic health policy environment. Your Role Here\u2019s what you will be doing: Support the Corporate Affairs-Alliance Development North America team in building and defending the organization\u2019s public profile and advocacy efforts at federal and state levels Develop advocacy and policy tools such as briefs, issue summaries, messaging frameworks, stakeholder maps, and reference materials Synthesize policy and advocacy research to provide actionable insights Provide operational support for advocacy initiatives and alliance activities Collaborate across Patient Advocacy, Policy, and Alliance Development functions Translate complex policy, scientific, or advocacy topics into clear and concise materials Manage assigned deliverables with accountability, including tracking progress and communicating updates About You The company is looking for: Current undergraduate (3+ years completed) or graduate student in Political Science, Communications, Government Affairs, Public Policy, Public Health, or Global Health with interest in health/biotech/life sciences policy and communications Effective written and verbal communication skills Ability to work independently and collaboratively with a proactive, solution-oriented approach Proficiency in MS Office (Outlook, Word, Excel, PowerPoint, OneNote, Teams) and comfort with virtual collaboration tools, document management systems, and AI Interest in health policy, patient advocacy, public affairs, communications, or biotechnology/pharmaceutical industry careers Self-motivated with ability to manage multiple projects in a fast-paced, dynamic environment Embraces company core values and competencies Possible travel Compensation & Benefits Hourly pay: $27/hour USD for Bachelor\u2019s level candidates Eligibility for annual bonus plan (Non-Commercial roles) or incentive compensation plan (Commercial roles) Opportunity to own shares through discretionary equity awards and Employee Stock Purchase Plan Comprehensive benefits package including Medical, Dental, Vision, 401(k), FSA/HSA, Life Insurance, Paid Time Off, and Wellness programs Training & Development The internship provides meaningful exposure to health policy, patient advocacy strategy, and corporate communications within a dynamic, cross-functional environment. This job may close before the stated closing date, you are encouraged to apply as soon as possible Report this job",
     "requirements": [
       "MS Office (Outlook, Word, Excel, PowerPoint, OneNote, Teams)",
-      "virtual collaboration tools",
-      "document management systems",
+      "Virtual collaboration tools",
+      "Document management systems",
       "AI"
     ],
     "source": "prosple",
     "url": "https://ph.prosple.com/graduate-employers/beone-medicines/jobs-internships/corporate-affairs-intern",
-    "summary": "support patient advocacy, policy research, and alliance development; build and defend public profile and advocacy efforts; provide operational support for advocacy initiatives and alliance activities",
+    "summary": "Support patient advocacy, policy research, and alliance development in a dynamic health policy environment. Develop advocacy and policy tools, provide actionable insights, and manage assigned deliverables.",
     "eligibility": [
-      "current undergraduate (3+ years Completed) or graduate",
-      "Political Science, Communications, Government Affairs, Public Policy, Public Health, or Global Health",
-      "interest in health/biotech/life sciences policy and communications",
-      "opportunity to own shares through discretionary equity awards and Employee Stock Purchase Plan"
+      "Current undergraduate (3+ years completed) or graduate student",
+      "BS in Political Science, Communications, Government Affairs, Public Policy, Public Health, or Global Health",
+      "3-6 months (480 hours required)",
+      "For-credit internship only",
+      "Student in good standing"
     ],
-    "score": 2,
-    "rationale": "The candidate's skills and background in computer science do not align with the internship's requirements in political science, communications, or public policy, resulting in low scores across all categories, particularly skills match and role relevance. The location and compensation aspects are also not favorable, as the internship is based in the United States and the candidate prefers Cebu. Overall, this internship is not a good fit for the candidate."
+    "score": 12,
+    "rationale": "The internship listing does not match the candidate's target role of Software Engineer, and the required skills are not aligned with the candidate's technical skills, resulting in low scores for skills match and role relevance. However, the internship is paid and remote, which contributes to some points for compensation and location. Overall, the internship is not a good fit for the candidate's profile and goals."
   },
   {
     "title": "Human Resources Intern (Organization Development)",
@@ -228,57 +223,53 @@
     "compensation": "Paid Internship",
     "description": "Location:\u00a0Triumph Bldg. Along Quezon Avenue near Hi-Top Supermarket HR Intern \u2013 OD Team (Creative & Ready to Jump In!) We\u2019re looking for a creative HR Intern to join our Organizational Development team ! If you love designing engaging content, know your way around tools like Canva , and are eager to learn HR in action, we want you on board. What you\u2019ll do: Support OD initiatives and HR projects Create visually engaging materials for training, events, and communications Bring fresh, creative ideas to the team Requirements: Creative mindset with a good eye for design Familiar with Canva or similar design tools Can start ASAP Perks: Hands-on HR experience Opportunity to work on real projects and make an impact Paid Internship Company Overview Personal Collection or PC is a direct-selling company that provides high-quality products and livelihood opportunities for thousands through its extensive dealer network. It operates from the mindset of hardworking people who have discovered the Great Life\u2014that is the ultimate purpose for doing business with PC. The company was established on August 20, 2003, with the introduction of its pioneer product, TUFF Toilet Bowl Cleanser. Other PC brands ALFA-1, Amazing, Colormatch, HBS, Revitalife, and White Dove, to name a few, have a steadfast following and are enjoyed by millions of consumers nationwide. OUR PURPOSE A Great Life is our Mindset and our noble purpose is to share this with everyone. Empower employees with an excellent working environment. Inspire our dealers with the best earning opportunities. Delight our consumers with superior value-for-money products and services. OUR FUTURE We envision being an organization that grows our business and at the same time serves the noble purpose of enhancing the lives of Filipino families. OUR MOTIVATION We do everything with great love because of our great love for our families. And, our desire is to give them the Intentional Great Life. This great love gives us the power to transform ourselves and the lives of our families. It pushes us to go beyond our limits to provide them with the Great Life.",
     "requirements": [
-      "Creative mindset",
-      "Good eye for design",
+      "Creative mindset with a good eye for design",
       "Familiar with Canva or similar design tools"
     ],
     "source": "prosple",
     "url": "https://ph.prosple.com/graduate-employers/personal-collection-direct-selling-inc/jobs-internships/human-resources-intern-organization-development",
-    "summary": "Support OD initiatives and HR projects. Create visually engaging materials for training, events, and communications. Bring fresh, creative ideas to the team.",
+    "summary": "Support OD initiatives and HR projects; Create visually engaging materials for training, events, and communications; Bring fresh, creative ideas to the team",
     "score": 12,
-    "rationale": "The internship listing has a low skills match and role relevance score since it requires design skills and a creative mindset, which do not align with the candidate's technical skills as a software engineer. The listing is also not located in Cebu, resulting in a lower location score, but it is paid, earning some compensation points. Overall, the internship is not a good fit for the candidate's profile and target role."
+    "rationale": "The internship listing does not require any technical skills the candidate has, resulting in a low skills match score. The role is also not relevant to the candidate's target role of Software Engineer, further reducing the overall score. However, the internship is paid, contributing 15 points to the total score."
   },
   {
     "title": "Financial Management Intern",
     "company": "Manulife Philippines",
-    "location": "null",
+    "location": "Quezon City, Philippines",
     "deadline": "2026-05-04",
     "compensation": null,
     "description": "Support Financial Analysts in Finance Control with monthly tasks, reporting, process documentation, and data reconciliation under senior guidance. Your Role Key responsibilities include: Providing support and assistance to Financial Analysts within Finance Control teams in regular monthly activities and reporting. Assisting in the preparation and creation of process documentation of Finance Control processes under senior supervision. Helping test the accuracy and completeness of existing Finance Control process documentation with guidance from senior members. Supporting simple data extraction, data formatting, and creation of basic financial schedules from Finance systems to aid in reconciling and substantiating ledger balances. About You The company is looking for: Currently enrolled in BS Financial Management or related courses. Strong oral and written communication skills to interact with senior officers and representatives from other divisions and functional departments. Strong organizational and time management skills with flexibility to adapt to changing environments. Ability to work independently and willingness to collaborate with other teams on large-scale projects. Training & Development Empowerment to learn and grow the career you want. Support in a flexible environment prioritizing well-being and inclusion. Opportunity to be part of a global team shaping the future. This job may close before the stated closing date. You are encouraged to apply as soon as possible. Report this job",
     "requirements": [
-      "Business & Management"
+      "BS Financial Management or related courses"
     ],
     "source": "prosple",
     "url": "https://ph.prosple.com/graduate-employers/manulife-philippines/jobs-internships/financial-management-intern-1",
-    "summary": "Support Financial Analysts in Finance Control with monthly tasks, reporting, process documentation, and data reconciliation under senior guidance.",
+    "summary": "Provide support and assistance to Financial Analysts with monthly tasks, reporting, process documentation, and data reconciliation. Aid in the preparation and creation of process documentation and test the accuracy of existing process documentation.",
     "eligibility": [
-      "Currently enrolled in BS Financial Management or related courses.",
-      "No other eligibility constraints mentioned"
+      "Currently enrolled in BS Financial Management or related courses",
+      "No specific mention of citizenship or visa, but may imply only available for certain regions/countries"
     ],
-    "score": 2,
-    "rationale": "The candidate's skills do not align with the listing's requirements, which are focused on financial management, and the candidate's degree in Computer Science does not meet the eligibility requirement of being enrolled in BS Financial Management or related courses. The location and compensation are unknown, but the role relevance and skills match are low, resulting in a low overall score."
+    "score": 12,
+    "rationale": "The candidate's skills do not align with the listing's requirements, and the role is not relevant to their target role as a Software Engineer. The eligibility and location criteria are also not met, as the candidate is enrolled in a BS Computer Science degree and prefers Cebu, while the listing requires a BS Financial Management degree and is based in Quezon City. However, the company is a reputable one and offers paid internships, which contributes to the minimal score."
   },
   {
     "title": "Talent Acquisition Intern",
     "company": "FPS Innovation Labs",
     "location": "Davao City, DR, Philippines",
-    "deadline": null,
+    "deadline": "job may close before the stated closing date",
     "compensation": null,
     "description": "The Talent Acquisition Intern will support end-to-end recruitment operations, focusing on candidate screening and profiling to aid the selection process. Your Role Here\u2019s what you will be doing: Sourcing, screening, and evaluating qualified candidates for all external requirements. Profiling initial and behavioral interviews and presenting qualified non-agent/agent candidates to the hiring manager. Overseeing the scheduling of department interviews with the appropriate hiring manager. Facilitating a smooth internal hiring process. Encoding necessary information into the system accurately and timely. Supporting the entire team in meeting hiring targets. About You The company is looking for: Currently pursuing a College Degree in any field and completing internship hours. Strong interpersonal and communication skills, both written and verbal. Creative mindset and genuine interest in workplace culture and employee wellbeing. Ability to multitask, stay organized, and work well in a collaborative environment. Proficient in Microsoft Office or Google Workspace tools. Prior experience in school organizations or event planning is a plus but not required. Training & Development Practical experience in HR and employee engagement programs. Exposure to organizational culture and internal communication strategies. Opportunity to work closely with cross-functional teams and leaders. A chance to contribute ideas that positively impact workplace culture. A supportive and inclusive environment for learning and growth. This job may close before the stated closing date. You are encouraged to apply as soon as possible. Report this job",
     "requirements": [
-      "Microsoft Office",
-      "Google Workspace",
-      "College Degree (no specific field mentioned)"
+      "Business & Management"
     ],
     "source": "prosple",
     "url": "https://ph.prosple.com/graduate-employers/fps-innovation-labs/jobs-internships/talent-acquisition-intern",
-    "summary": "Support end-to-end recruitment operations, focusing on candidate screening and profiling to aid the selection process. Sourcing, screening, and evaluating qualified candidates for all external requirements.",
+    "summary": "Sourcing, screening, and evaluating qualified candidates for all external requirements. Profiling initial and behavioral interviews and presenting qualified non-agent/agent candidates to the hiring manager.",
     "eligibility": [
-      "Currently pursuing a College Degree in any field",
-      "Completing internship hours"
+      "Currently pursuing a College Degree in any field and completing internship hours."
     ],
     "score": 32,
-    "rationale": "The candidate's skills do not align with the Talent Acquisition Intern role, resulting in a low skills match score. The listing's requirements and responsibilities also do not match the candidate's target role of Software Engineer, further reducing the overall score. However, the candidate meets the eligibility requirements and the listing is based in the Philippines, albeit not in the preferred location of Cebu."
+    "rationale": "The candidate's skills do not align with the listing's requirements, and the role is not relevant to their target role as a Software Engineer. However, the candidate meets the eligibility requirements and the location, although not preferred, is still within the Philippines, resulting in a moderate score. The compensation is unspecified, which also affects the overall score."
   },
   {
     "title": "IT Intern",
@@ -290,13 +281,14 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91587864",
-    "score": 42,
-    "rationale": "The candidate's skills do not closely match the IT Asset Management Intern role, resulting in a low skills match score. The location is also not preferred, being in Taguig City instead of Cebu, but still within the Philippines, earning 10 points. The internship is likely paid, but since it's unspecified, the candidate earns 7 points for compensation, contributing to the overall score."
+    "summary": "The IT Asset Management Intern oversees the lifecycle management of hardware and software assets within Tenet.",
+    "score": 52,
+    "rationale": "The candidate's skills match the general IT field, but the listing lacks specific requirements to fully assess their alignment. The role of IT Intern is somewhat relevant to the candidate's target role of Software Engineer, and the candidate meets no specified eligibility criteria. The location in Taguig City, Metro Manila, scores 10 points, and since the compensation is unspecified, it scores 7 points."
   },
   {
     "title": "IT Assistant",
     "company": "HKR Equipment Corporation",
-    "location": "Cebu City, Philippines",
+    "location": "Makati City, Metro Manila",
     "deadline": null,
     "compensation": "\u20b120,000 \u2013 \u20b122,000 per month",
     "description": "Assists IT officers in Network infrastructure maintenance",
@@ -304,8 +296,8 @@
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91454744",
     "summary": "Assists IT officers in Network infrastructure maintenance",
-    "score": 42,
-    "rationale": "The candidate's skills do not closely match the IT Assistant role, which likely focuses on network infrastructure, resulting in a low skills match score. However, the listing's location in Cebu City and potential for paid compensation contribute to a moderate overall score. The role relevance is also a mismatch since the candidate targets a Software Engineer position."
+    "score": 32,
+    "rationale": "The candidate's skills do not closely match the IT Assistant role, and the location is not preferred, resulting in lower scores for skills match and location. However, the candidate's degree and experience may still be relevant, and the internship is paid, although not explicitly stated, it is assumed to be paid as part of a company's operations. The role relevance score is low as IT Assistant does not closely match the target role of Software Engineer."
   },
   {
     "title": "Engineer Student Intern",
@@ -317,8 +309,8 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91577656",
-    "score": 32,
-    "rationale": "The candidate's skills do not closely match the listing's unspecified requirements, resulting in a low skills match score. The role is somewhat relevant to the candidate's target role, but the location is onsite in another PH city, reducing the location score. The internship is likely paid, but since it's unspecified, the compensation score is moderate, and eligibility and role relevance scores are partial due to lack of information."
+    "score": 52,
+    "rationale": "The candidate's skills match is moderate due to the lack of specific requirements in the listing, but their role relevance and eligibility fit are good given their background as a computer science student. The location is a downside since the candidate prefers Cebu and the listing is based in Cavite, but the fact that it's still in the Philippines allows for some points. Compensation is unspecified, which also affects the overall score."
   },
   {
     "title": "AIA Intern",
@@ -332,7 +324,7 @@
     "url": "https://ph.jobstreet.com/job/91036960",
     "summary": "Support business projects across key functions (Operations, Finance, Marketing, HR, IT, Sales, etc.)",
     "score": 32,
-    "rationale": "The candidate's skills do not directly align with the listing's unspecified requirements, and the role relevance is low since the title 'AIA Intern' does not closely match the target role of Software Engineer. The candidate meets none of the preferred location, eligibility, or compensation criteria, with the listing being onsite in Makati City, which is not the preferred location of Cebu."
+    "rationale": "The candidate's skills do not align with the AIA Intern listing as the listing's requirements are not specified, resulting in a low skills match score. The role relevance is also low since the listing title does not explicitly match the target role of Software Engineer. The location score is 10 pts as the listing is onsite in Makati City, which is not the candidate's preferred location of Cebu."
   },
   {
     "title": "Site Reliability Engineer - Intern (Graduates of 2024-2026)",
@@ -345,7 +337,7 @@
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91291699",
     "score": 77,
-    "rationale": "The candidate's skills match is moderate due to the lack of specific requirements in the listing, but their experience in backend development and system design could be relevant to site reliability engineering. The role is somewhat relevant to the candidate's target role as a Software Engineer, and the location is a perfect match. The internship is paid, as implied by the company offering hands-on training and mentorship, contributing to the overall score."
+    "rationale": "The candidate scores high in location and compensation aspects, with the internship being based in Cebu and implying paid work. Although skills match and role relevance are not perfectly aligned due to the Site Reliability Engineer title, the candidate's broad technical expertise still earns a considerable skills match score. The eligibility fit is uncertain due to lack of specifics, but the candidate's year level and degree may align with the graduation years mentioned."
   },
   {
     "title": "Internship for IT / ComSci / CpE",
@@ -357,8 +349,8 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91431487",
-    "score": 32,
-    "rationale": "The candidate's skills match and experience summary do not align with the listing's vague requirements, resulting in a moderate skills match score. The role relevance is moderate as the title mentions IT/ComSci/CpE, which is related to Software Engineer. The location is a major drawback, as Metro Manila is not the candidate's preferred location of Cebu, resulting in a low location score."
+    "score": 42,
+    "rationale": "The candidate's skills match the listing moderately well due to their strong background in software development, but the listing lacks specific requirements to fully assess the match. The role is relevant to the candidate's target role as a Software Engineer, and the candidate's degree and year level are likely eligible, but the location is onsite in Metro Manila, which is not the candidate's preferred location. The compensation is unspecified, and the listing lacks details on the internship's specifics."
   },
   {
     "title": "Student Intern (IT Programming)",
@@ -370,9 +362,9 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91208427",
-    "summary": "Assisting senior developers within the IT Department by gaining practical software development experience.",
+    "summary": "The Programmer Intern will assist senior developers within the IT Department to gain practical software development experience.",
     "score": 52,
-    "rationale": "The candidate's skills match the listing's general IT programming requirements, and the role is somewhat relevant to their target role as a Software Engineer. However, the location is in Makati City, which is not the candidate's preferred location of Cebu, and the eligibility and compensation details are unspecified, resulting in a moderate overall score."
+    "rationale": "The candidate's skills match the listing moderately due to the lack of specified requirements, but their role relevance and eligibility fit are uncertain due to limited information. The location is a drawback as the candidate prefers Cebu, but the listing is based in Makati City, resulting in a lower location score. The compensation is unspecified, leading to a moderate score in that category."
   },
   {
     "title": "Technician Student Intern",
@@ -384,22 +376,22 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/89181087",
-    "summary": "You will gain hands-on training in operating and maintaining automated test handlers used in the semiconductor industry.",
+    "summary": "gain hands-on training in operating and maintaining automated test handlers used in the semiconductor industry",
     "score": 32,
-    "rationale": "The internship listing scores low in skills match and role relevance as it is for a Technician Student Intern position that doesn't align with the candidate's software engineering background and skills. The location also doesn't match the candidate's preference, being in Cavite instead of Cebu, resulting in a lower location score. However, the candidate's eligibility and compensation aspects are not clearly disqualifying, but not enough to significantly increase the overall score."
+    "rationale": "The candidate's skills do not align well with the Technician Student Intern role, resulting in a low skills match score. The role is also not relevant to the candidate's target role of Software Engineer, contributing to a low role relevance score. However, the candidate's degree and year level may still be eligible for the internship, but the location and compensation are not ideal, with Cavite being outside of the preferred location of Cebu and the compensation being unspecified."
   },
   {
     "title": "Technology & Innovation Internship (Rolling Intake)",
     "company": "Globe Telecom",
-    "location": "Cebu City, Philippines",
-    "deadline": "null",
-    "compensation": "null",
+    "location": "Globe (implied as Philippines-based company)",
+    "deadline": null,
+    "compensation": null,
     "description": "At Globe, tech isn\u2019t just backend\u2014it\u2019s front and center of change. As a Technology & Innovation Intern, you\u2019ll join our product squads, data...",
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/90350521",
-    "score": 77,
-    "rationale": "The candidate's skills match is high due to their extensive technical background, and the role relevance is strong as it involves technology and innovation. The location is a perfect match since it's based in Cebu, but the eligibility fit and compensation are uncertain due to lack of specified requirements, resulting in a moderate deduction from the total score."
+    "score": 67,
+    "rationale": "The candidate's skills match the listing moderately due to the absence of specific requirements, and the role relevance is high as the internship title suggests a potential fit for a software engineer. The eligibility fit and location score are uncertain due to lack of information, but the candidate's preference for Cebu and the company being Philippines-based suggests a possible fit, and the compensation is unspecified, leading to a moderate overall score."
   },
   {
     "title": "Design Verification Engineer Intern",
@@ -411,9 +403,8 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91241070",
-    "summary": "The Engineering Enablement team is responsible for providing tools, methodologies, and support to engineering teams to accelerate product development.",
     "score": 32,
-    "rationale": "The candidate's skills do not closely match the Design Verification Engineer Intern role, resulting in a low skills match score. The role is also not relevant to the candidate's target role of Software Engineer, and the location is not the preferred Cebu, but rather onsite in another PH city, Cavite. The eligibility and compensation details are unspecified, limiting the overall score."
+    "rationale": "The candidate's skills do not closely match the Design Verification Engineer Intern role, resulting in a low skills match score. The role relevance is also low since the listing title does not align with the candidate's target role of Software Engineer. The candidate meets some eligibility criteria and the location is onsite in another PH city, contributing to the overall score."
   },
   {
     "title": "Engineer Student Intern (Start ASAP)",
@@ -426,7 +417,7 @@
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/90135583",
     "score": 52,
-    "rationale": "The candidate's skills match is moderate due to the lack of specific requirements in the listing, but their role relevance is high as the title includes 'Engineer' and 'Software'. The eligibility fit and compensation aspects are unclear, while the location is onsite in another PH city, resulting in a moderate overall score."
+    "rationale": "The candidate's skills match the general software engineering requirements, but the listing lacks specific requirements to confirm a strong match. The role is relevant to the candidate's target role, but the location is in Manila, not Cebu, resulting in a lower location score. The eligibility and compensation aspects are unclear, but the candidate's degree and experience suggest a potential fit, although the year level and other eligibility criteria are unspecified."
   },
   {
     "title": "BI Data Support Student (Part-Time)",
@@ -438,9 +429,11 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91047405",
-    "summary": "Provide day-to-day operational support to the Business Intelligence (BI) team focusing on routine activities.",
-    "score": 32,
-    "rationale": "The candidate's skills do not closely match the BI Data Support Student listing, and the role is not relevant to their target role as a Software Engineer. However, the candidate meets the unspecified eligibility requirements and the listing is in the Philippines, although not in the preferred Cebu location, resulting in a score of 10 for location and 20 for eligibility fit is reduced due to lack of information, skills match and role relevance are low."
+    "eligibility": [
+      "Student"
+    ],
+    "score": 42,
+    "rationale": "The candidate's skills match is moderate due to the lack of specified requirements, but their role relevance is low since the listing title does not closely match the target role of Software Engineer. The candidate meets the eligibility fit as a student, but the location is onsite in another PH city, and the compensation is unspecified, resulting in a moderate overall score."
   },
   {
     "title": "Design Verification Intern",
@@ -452,8 +445,9 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91241060",
+    "summary": "We are looking for passionate and skilled students who are looking to enrich their undergraduate journey through an internship with Analog Devices, and help us make technology happen by learning and working on real-world projects.",
     "score": 32,
-    "rationale": "The candidate's skills do not align with the Design Verification Intern role, and the location is not preferred, resulting in low scores for skills match and location. However, the internship is paid, which contributes to the overall score. The role relevance and eligibility fit are also not well-matched, further reducing the score."
+    "rationale": "The candidate's skills do not closely match the Design Verification Intern role, and the location is not Cebu, resulting in lower scores for skills match and location. However, the candidate's degree and year level may still be eligible for the internship, and the fact that it's a paid internship would contribute to the score, but the compensation details are not specified, leading to a moderate score."
   },
   {
     "title": "IT Intern",
@@ -465,9 +459,9 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91573854",
-    "summary": "The IT Intern will be responsible for supporting the IT Department in maintaining IT systems, troubleshooting hardware and software.",
+    "summary": "Supporting the IT Department in maintaining IT systems, troubleshooting hardware and software.",
     "score": 52,
-    "rationale": "The candidate's skills match is moderate due to lack of specific requirements, role relevance is moderate as IT Intern may not be directly related to Software Engineer, eligibility fit and requirements are unspecified, location is onsite in another PH city, and compensation is unspecified, resulting in a total score of 52."
+    "rationale": "The candidate's skills match the listing moderately, but the role relevance and eligibility fit are unclear due to lack of specifics. The location is a downside as it's onsite in another PH city, not Cebu or remote. The listing being paid is assumed as it's an internship, but compensation details are not provided."
   },
   {
     "title": "Governance Risk and Compliance (GRC) Analyst",
@@ -479,9 +473,9 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91371156",
-    "summary": "Develop foundational experience in GRC and opportunities to develop skills in compliance frameworks.",
+    "summary": "Build foundational experience in GRC, develop skills in compliance frameworks.",
     "score": 32,
-    "rationale": "The candidate's skills do not align with the GRC Analyst role, resulting in a low skills match score. The role is also not relevant to the candidate's target role as a Software Engineer, further reducing the overall score. However, the candidate meets some basic eligibility criteria and the company is based in the Philippines, although not in the preferred location of Cebu."
+    "rationale": "The candidate's skills do not align with the GRC Analyst role, resulting in a low skills match score. The role is also not relevant to the candidate's target role of Software Engineer, further reducing the score. However, the candidate meets some eligibility criteria and the location, although not preferred, is still within the Philippines, contributing to a moderate overall score."
   },
   {
     "title": "Technical Intern (With Allowance)",
@@ -493,8 +487,8 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91556653",
-    "score": 32,
-    "rationale": "The candidate's skills match is low due to the listing's lack of specified requirements, but their role relevance is moderate as a technical intern can be related to software engineering. The eligibility fit and compensation are uncertain, while the location is onsite in another PH city, resulting in a relatively low overall score."
+    "score": 42,
+    "rationale": "The candidate's skills and experience as a software engineer do not closely match the Technical Intern role, which likely focuses on R&D, QA, and QC in a chemical context, resulting in a low skills match score. The location in Bulacan also does not align with the candidate's preference for Cebu, contributing to a lower location score. However, the internship is paid, contributing to the overall score."
   },
   {
     "title": "IT Intern | On-Site Pampanga | Paid Internship",
@@ -508,10 +502,10 @@
     "url": "https://ph.jobstreet.com/job/91551068",
     "summary": "Support hardware, software, networks, users, and daily system operations.",
     "eligibility": [
-      "enrolled IT/CS students only"
+      "IT/CS students"
     ],
-    "score": 47,
-    "rationale": "The candidate's skills do not align closely with the internship's general IT support focus, resulting in a moderate skills match score. The onsite location in Pampanga also reduces the location score, but the paid internship and potential relevance to the software engineering field contribute to the overall score. The candidate's eligibility is uncertain due to the lack of year level information, which might affect their eligibility as an enrolled IT/CS student."
+    "score": 57,
+    "rationale": "The candidate's skills match the listing moderately, but the role relevance is limited as the internship focuses on IT support rather than software engineering. The candidate meets the eligibility requirements as a 3rd-year CS student, but the location is onsite in Pampanga, which is not the preferred location, resulting in a lower location score. The internship is paid, which contributes to the overall score."
   },
   {
     "title": "IT Intern/OJT",
@@ -524,8 +518,8 @@
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91560373",
     "summary": "Provide technical support, troubleshoot hardware/software issues, and assist users effectively.",
-    "score": 32,
-    "rationale": "The candidate's skills do not closely match the IT Helpdesk Intern role, resulting in a low skills match score. The location is also not a match, as the candidate prefers Cebu, but the listing is onsite in Muntinlupa City, Metro Manila. However, the candidate's degree and experience may still be considered eligible, but the lack of specificity in the listing's requirements and eligibility criteria limits the overall score."
+    "score": 42,
+    "rationale": "The candidate's skills match is low due to the listing's focus on IT helpdesk and technical support, which doesn't align with their software engineering skills. The role relevance is also low since the listing title is IT Intern/OJT, which doesn't closely match the candidate's target role of Software Engineer. The candidate meets some eligibility criteria, but location is a major drawback, scoring only 10 points as it's onsite in another PH city."
   },
   {
     "title": "Operations Excellence Analyst",
@@ -538,7 +532,7 @@
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/85922325",
     "score": 32,
-    "rationale": "The candidate's skills do not align well with the Operations Excellence Analyst role, resulting in a low skills match score. The role relevance is also low since the listing title and responsibilities do not match the candidate's target role of Software Engineer. The candidate does not meet the location preference, but the internship is paid, although the compensation details are unspecified, leading to a moderate compensation score."
+    "rationale": "The candidate's skills do not strongly align with the Operations Excellence Analyst role, and the role itself is not closely related to the target role of Software Engineer. The location is also not preferred, being in Metro Manila instead of Cebu, resulting in a lower score. However, the candidate's degree and year level may still be eligible, but this is uncertain due to the listing's lack of specification."
   },
   {
     "title": "Global Infrastructure Services Intern",
@@ -551,7 +545,7 @@
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91515721",
     "score": 52,
-    "rationale": "The candidate's skills match is moderate due to the lack of specific requirements, but their experience in backend development and cloud services is relevant. The role relevance is moderate as Global Infrastructure Services Intern is related to Software Engineer. The eligibility fit and compensation are unknown, and the location is onsite in Manila, which is not the candidate's preferred location, resulting in a lower overall score."
+    "rationale": "The candidate's skills match the listing moderately due to their strong background in software development, but the role relevance is somewhat low since the title 'Global Infrastructure Services Intern' does not directly align with the target role of Software Engineer. The candidate meets some eligibility criteria, but others are unspecified, and the location is onsite in Manila, which is not the preferred location of Cebu, resulting in a lower score."
   },
   {
     "title": "Product Operations Intern",
@@ -563,9 +557,9 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91482947",
-    "summary": "Assist in product development, basic design, and merchandising tasks, while supporting day-to-day e-commerce operations.",
+    "summary": "Assist in product development, basic design using Adobe Illustrator, and merchandising tasks while supporting day-to-day e-commerce operations.",
     "score": 32,
-    "rationale": "The candidate's skills do not closely match the listing's requirements, and the role is not relevant to their target role as a Software Engineer. The candidate meets some eligibility criteria by default due to lack of specification, but the location is onsite in another PH city, earning 10 points. The compensation is unspecified, earning 7 points."
+    "rationale": "The candidate's skills do not align well with the Product Operations Intern role, which does not require programming skills, resulting in a low skills match score. The location is also not preferred, being in Makati City instead of Cebu, which reduces the location score. However, the candidate's eligibility and compensation aspects are not explicitly mentioned in the listing, preventing further score reduction."
   },
   {
     "title": "Internship Program - Iligan",
@@ -577,13 +571,14 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/90893814",
+    "summary": "Intern will actually do in the role: Enrolled in an internship subject.",
     "eligibility": [
       "enrolled in an internship subject",
       "with good scholastic records duly endorsed by the school",
       "able to pass the pre-internship requirements"
     ],
     "score": 32,
-    "rationale": "The internship listing scores low due to the candidate's unclear eligibility fit, lack of skills match information, and non-relevant role. The location also doesn't match the candidate's preference, being onsite in Iligan instead of Cebu or remote. The compensation is also unspecified, further reducing the overall score."
+    "rationale": "The candidate's skills do not match the listing's requirements since the requirements are not specified, resulting in a low skills match score. The role is not directly relevant to the candidate's target role as a Software Engineer, and the location is also not preferred. However, the candidate meets the eligibility fit and the internship is paid, although the compensation is not explicitly stated, it can be assumed as paid since it's an internship program."
   },
   {
     "title": "IT Intern",
@@ -595,57 +590,55 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/90261104",
-    "score": 57,
-    "rationale": "The candidate's skills are not explicitly matched with the listing's requirements, but their technical background suggests some potential for alignment, earning a moderate skills match score. The listing's location in Cebu and potential for paid compensation are major positives, but the lack of specific role responsibilities and eligibility details limits the overall score. The role title 'IT Intern' is somewhat relevant to the candidate's target role of Software Engineer, but not a perfect match."
+    "eligibility": [
+      "prior to graduation"
+    ],
+    "score": 85,
+    "rationale": "The candidate's skills match the general IT intern requirements well, and the role is relevant to their target role as a Software Engineer. The location in Cebu City also aligns with the candidate's preference, and the internship is likely to be paid, contributing to the high score. However, the lack of specific requirements and eligibility details prevents a perfect score."
   },
   {
     "title": "Sales Service Intern",
     "company": "Bosch",
-    "location": "Taguig City, Metro Manila",
+    "location": "Philippines",
     "deadline": null,
     "compensation": null,
     "description": "Robert Bosch Inc. (Philippines) has diversified businesses in Power Tools, Automotive Aftermarket, Automotive Original Equipment, Building...",
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91351359",
-    "score": 12,
-    "rationale": "The candidate's skills and experience do not align with the Sales Service Intern role, resulting in low scores for skills match and role relevance. The location is also not a preference for the candidate, but since it's onsite in another PH city, it gets a moderate score. The compensation is unspecified, leading to a middle score."
+    "score": 22,
+    "rationale": "The listing score is low due to the lack of skills match and role relevance, as the candidate's background is in software development, but the listing is for a Sales Service Intern. However, the candidate meets some eligibility criteria and the location is a partial match, as the listing is based in the Philippines, but not specifically in Cebu."
   },
   {
     "title": "Support Specialist Intern (Start ASAP)",
     "company": "Thales",
-    "location": "Makati",
+    "location": "Makati City, Metro Manila",
     "deadline": null,
     "compensation": null,
     "description": "Join Thales as an Intern Support Specialist in Makati, providing administrative support, report generation, and task management for a global...",
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/90136542",
-    "summary": "Providing administrative support, report generation, and task management",
     "score": 32,
-    "rationale": "The candidate's skills do not strongly align with the Support Specialist Intern role, and the location is not preferred, resulting in lower scores for skills match and location. However, the internship is paid, which contributes to the overall score, but the role relevance is not a strong match for the candidate's target role as a Software Engineer."
+    "rationale": "The candidate's skills do not align well with the Support Specialist Intern role, resulting in a low skills match score. The location is also not preferred, being in Makati City instead of Cebu, which further reduces the score. However, the candidate's degree and year level may still be eligible, but since eligibility is not specified, the eligibility fit score is moderate."
   },
   {
     "title": "Technical Support Trainee",
     "company": "Body Mechanic, Inc.",
     "location": "Pasig City, Metro Manila",
-    "deadline": "ASAP",
+    "deadline": null,
     "compensation": "\u20b1200 \u2013 \u20b1300 per month",
     "description": "ASAP",
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91389748",
-    "summary": "None found",
-    "eligibility": [
-      "None found"
-    ],
     "score": 32,
-    "rationale": "The candidate's score is relatively low due to a poor role relevance match, as the listing is for a Technical Support Trainee position which does not closely align with the candidate's target role of Software Engineer. Additionally, the location is onsite in another PH city, resulting in a lower location score. However, the candidate's eligibility and skills are not explicitly disqualified by the listing, allowing for some points in those categories."
+    "rationale": "The candidate's skills do not closely match the Technical Support Trainee role, resulting in a low skills match score. The role is also not relevant to the candidate's target role of Software Engineer, and the location is not the preferred Cebu, but rather onsite in another PH city, resulting in a moderate location score. The compensation is unspecified, and eligibility and requirements are not provided, contributing to the overall moderate-low score."
   },
   {
     "title": "Entry-level Developer / UXUI Designer (ON-SITE) HS Welcome to apply",
     "company": null,
-    "location": "Philippines",
+    "location": "Dalaguete, Cebu",
     "deadline": null,
     "compensation": "\u20b110,000 \u2013 \u20b113,000 per month",
     "description": "Onsite, entry-level job open to HS and college undergrad/graduates who are eager to gain real-world experience in both software dev and digital design",
@@ -654,12 +647,10 @@
     "url": "https://ph.jobstreet.com/job/91458645",
     "summary": "Gain real-world experience in software dev and digital design.",
     "eligibility": [
-      "HS and college undergrad/graduates",
-      "Volunteer",
-      "For-credit"
+      "HS and college undergrad/graduates"
     ],
-    "score": 62,
-    "rationale": "The candidate's skills match the listing moderately, but the role relevance is high since the listing is for a developer position. The candidate meets the eligibility requirements and the location is onsite in the Philippines, which scores 10 points. The compensation is unspecified, scoring 7 points, resulting in a total score of 62."
+    "score": 82,
+    "rationale": "The candidate scores high due to the location being in Cebu, paid compensation is implied, and their skills match and role relevance are strong despite the lack of specific requirements. The eligibility fit is also good as the candidate is a college undergraduate. However, the score is not perfect due to the uncertainty in compensation and limited information on the job requirements."
   },
   {
     "title": "Salesforce Developer Team Lead",
@@ -671,8 +662,9 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91374605",
-    "score": 32,
-    "rationale": "The candidate's score is low due to a poor skills match with the listing, which requires Salesforce expertise that is not mentioned in the candidate's profile. The role relevance is also not a perfect match, as the candidate is targeting a Software Engineer role, not a team lead position. The location and compensation aspects of the listing also do not favor the candidate, as it is onsite in Taguig City, not Cebu, and compensation details are not specified."
+    "summary": "Drive the technical strategy and delivery of Salesforce-based solutions while leading and mentoring developers and interns.",
+    "score": 42,
+    "rationale": "The candidate's skills do not closely match the Salesforce-specific requirements of the listing, resulting in a low skills match score. However, the candidate's experience in software development and technical leadership aligns with the role's responsibilities, contributing to a moderate role relevance score. The location and eligibility criteria also impact the overall score, as the candidate prefers Cebu but the listing is based in Taguig City, and there is no information on compensation or eligibility requirements."
   },
   {
     "title": "IT Intern",
@@ -688,8 +680,8 @@
     "eligibility": [
       "qualified students"
     ],
-    "score": 32,
-    "rationale": "The candidate's skills do not closely match the IT Intern listing's requirements, and the role relevance is low since the candidate targets a Software Engineer position. However, the candidate meets the eligibility criteria as a student and the location, although not preferable, is still within the Philippines, earning some points. The compensation is unspecified, which also affects the overall score."
+    "score": 57,
+    "rationale": "The candidate's skills match the listing moderately, but the role relevance is low since the listing is for an IT Intern rather than a Software Engineer. The candidate meets the eligibility requirements as a qualified student, and the location is onsite in another PH city, earning 10 points. The listing does not specify compensation, resulting in 7 points."
   },
   {
     "title": "IT Intern",
@@ -702,7 +694,7 @@
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91532790",
     "score": 32,
-    "rationale": "The candidate's skills match is not explicitly evaluated due to lack of requirements, but their role relevance and eligibility fit are uncertain due to the listing's lack of specificity. The location score is 10 since the candidate prefers Cebu but the listing is in Makati City. The compensation score is 7 as it is unspecified, contributing to the overall score of 32."
+    "rationale": "The candidate's score is low due to the lack of information about the listing's requirements and eligibility, but they do not meet the location preference, which is a significant factor. The candidate's skills are not matched against specific requirements, but their degree and experience suggest potential relevance to the IT Intern role. The onsite location in Makati City, Metro Manila, results in a lower location score."
   },
   {
     "title": "IT Intern (OJT)",
@@ -714,12 +706,12 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91128082",
-    "summary": "Setup, troubleshoot, and provide technical support for network systems.",
+    "summary": "This intern will assist with network setup, troubleshooting, and technical support.",
     "eligibility": [
       "3rd year students only"
     ],
-    "score": 32,
-    "rationale": "The candidate's skills do not match the listing's network-focused requirements, and the location is not in Cebu, resulting in lower scores for skills match and location. However, the internship is paid is unspecified, and the candidate does not meet the year level eligibility requirement, further reducing the overall score."
+    "score": 52,
+    "rationale": "The candidate's skills do not closely match the internship's focus on network setup and technical support, resulting in a low skills match score. However, the candidate meets the eligibility requirement of being a 3rd year student, and the location, although not in Cebu, is still within the Philippines, earning some points in those categories. The internship is unpaid, which negatively impacts the compensation score."
   },
   {
     "title": "IT Intern (Paid Internship)",
@@ -731,8 +723,8 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91189300",
-    "score": 52,
-    "rationale": "The candidate's skills match is high due to their extensive technical background, and their role relevance is good as the internship is related to IT. However, the location is a drawback as Las Pinas City is not Cebu, and the eligibility and compensation aspects are partially met, resulting in a moderate overall score."
+    "score": 47,
+    "rationale": "The candidate's skills match is moderate due to the lack of specific requirements, role relevance is high as the title includes 'IT' which is related to Software Engineer, eligibility fit and compensation are uncertain due to unspecified requirements, and location is partially unfavorable since it's not Cebu-based but still within the Philippines, resulting in a total score of 47."
   },
   {
     "title": "IT Intern",
@@ -744,8 +736,9 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91582662",
+    "summary": "Gain hands-on experience in digital tools, AI technologies, and content-driven platforms.",
     "score": 32,
-    "rationale": "The candidate's skills do not align well with the listing's vague requirements, resulting in a low skills match score. The role relevance is moderate, as 'IT Intern' is related to the candidate's target role of Software Engineer. The candidate does not meet the location preference and the compensation is unspecified, contributing to the overall low score."
+    "rationale": "The candidate's skills match is limited due to the lack of specified requirements, but their experience in software development is relevant to the IT Intern role, worth 10 points for skills match and 20 points for role relevance. However, the location is onsite in Metro Manila, which is not the candidate's preferred location, earning 10 points for location. The compensation is unspecified, earning 7 points, and eligibility fit is unclear, earning 0 points, resulting in a total score of 32."
   },
   {
     "title": "IT / System Intern",
@@ -758,7 +751,7 @@
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91362182",
     "score": 32,
-    "rationale": "The candidate's skills match is low due to the lack of specified requirements, but their role relevance is moderate as the title 'IT / System Intern' is somewhat related to Software Engineer. The candidate does not meet the location preference and the eligibility fit is unclear, while the compensation is unspecified, resulting in a relatively low overall score."
+    "rationale": "The candidate's skills match the general IT/systems domain, but the listing lacks specific requirements to fully assess the match. The role is not a direct fit for a Software Engineer target role, and the location is not the preferred Cebu. The internship is unpaid and has unspecified eligibility and requirements, further reducing the score."
   },
   {
     "title": "Intern- Technology Department",
@@ -772,7 +765,7 @@
     "url": "https://ph.jobstreet.com/job/91444240",
     "summary": "Acts as the bridge between clients and internal teams, explaining features, handling feedback, and assisting in bug resolution.",
     "score": 52,
-    "rationale": "The candidate's skills match is moderate due to the lack of specific requirements, but their experience as a backend developer is relevant. The role relevance is low since the listing title and responsibilities don't closely match the candidate's target role as a Software Engineer. The eligibility fit and location scores are moderate to low, with the candidate not meeting the preferred location and unclear eligibility criteria, but the internship being paid is assumed, contributing to the overall score."
+    "rationale": "The candidate's score is moderate due to a strong role relevance and skills match, but limited eligibility fit and location points since the internship is onsite in Pasig City, not Cebu or remote. The compensation is also unspecified, reducing the overall score. Despite this, the candidate's experience and skills in software development are likely a good fit for the technology department intern role."
   },
   {
     "title": "Business Operations & Process Intern (WFH)",
@@ -784,21 +777,26 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91514946",
-    "score": 12,
-    "rationale": "The candidate's skills do not align with the Business Operations & Process Intern listing, and the role is not relevant to their target Software Engineer position. However, the onsite requirement is not applicable since the job is work-from-home, but it's not based in the candidate's preferred location of Cebu, and the company is located in Metro Manila, earning a moderate location score."
+    "summary": "Gain real work experience in operations, reporting, and process improvement while working from home.",
+    "score": 32,
+    "rationale": "The candidate's skills do not align well with the Business Operations & Process Intern listing, resulting in a low skills match score. The role relevance is also low since the listing title and responsibilities do not match the candidate's target role of Software Engineer. However, the candidate meets some eligibility requirements and the location score is moderate, as Metro Manila is not the preferred location but is still within the Philippines."
   },
   {
     "title": "IT Intern",
     "company": "Integrated Computer Systems Inc",
-    "location": "Greenhills, Metro Manila",
-    "deadline": null,
-    "compensation": null,
+    "location": "null",
+    "deadline": "null",
+    "compensation": "null",
     "description": "This is a paid internship that offers a great opportunity to kickstart your career with one of the leading IT solutions companies in the Philippines.",
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91469572",
-    "score": 47,
-    "rationale": "The candidate's skills are not explicitly matched with the listing's requirements, but their extensive technical background likely overlaps with the IT Intern role, earning some skills match points. The location in Metro Manila reduces the location score, and the paid nature of the internship maximizes the compensation score, but the lack of specified requirements and eligibility details limits the eligibility fit and skills match scores."
+    "summary": "null",
+    "eligibility": [
+      "paid internship"
+    ],
+    "score": 82,
+    "rationale": "The candidate's skills match the general IT internship requirements well, and the paid internship eligibility fits their needs. The role relevance and eligibility fit are also high, given the candidate's degree and year level. However, the location is unspecified, which prevents it from receiving the full 20 points, resulting in a slightly lower overall score."
   },
   {
     "title": "Solutions Intern",
@@ -810,9 +808,9 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91545950",
-    "summary": "Supports procurement and supply chain tasks, including data coding, supplier sourcing, research, and presentations.",
+    "summary": "Supports procurement and supply chain tasks, including data coding, supplier sourcing, research, and presentations in a shared services team.",
     "score": 32,
-    "rationale": "The candidate's skills do not align well with the listing's requirements, which seem to focus on procurement and supply chain tasks rather than software engineering. The location is also not a good fit, as the candidate prefers Cebu and the listing is based in Makati City, resulting in a low location score. The role relevance and eligibility fit are also unclear due to the lack of specified requirements."
+    "rationale": "The candidate's skills do not strongly align with the listing's procurement and supply chain focus, resulting in a low skills match score. The role relevance is also low since the listing title and responsibilities do not closely match the candidate's target role of Software Engineer. The candidate meets some criteria, such as being eligible, but the location and compensation are not ideal or specified."
   },
   {
     "title": "IT IPG Intern",
@@ -824,22 +822,22 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91512632",
-    "summary": "Troubleshoot, maintain systems, and assist with project implementation",
-    "score": 32,
-    "rationale": "The candidate's skills do not closely match the IT IPG Intern role, and the location is not preferred. However, the role is somewhat relevant to the candidate's target role as a Software Engineer, and the compensation is unspecified, resulting in a moderate score."
+    "summary": "Troubleshoot IT systems, maintain them, and assist with project implementation.",
+    "score": 52,
+    "rationale": "The candidate's skills match the listing moderately due to their extensive technical background, but the role relevance is limited as the title 'IT IPG Intern' does not directly align with a Software Engineer position. The candidate meets some eligibility criteria, such as degree, but location is a drawback as it's onsite in Metro Manila, not Cebu. Compensation is unspecified, which also affects the overall score."
   },
   {
     "title": "IT Intern OJT (Ortigas)",
     "company": "Golden Suntec Solutions, Inc.",
     "location": "Ortigas, Metro Manila",
     "deadline": null,
-    "compensation": "PHP 100/8 hours daily",
+    "compensation": "P100 for every 8 hours daily",
     "description": "Allowance of P100 for every 8 hours daily.",
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91520922",
-    "score": 37,
-    "rationale": "The candidate's skills match is moderate due to lack of specified requirements, role relevance is low since the listing title does not explicitly mention software engineering, eligibility fit is neutral as no specific eligibility criteria are mentioned, location scores low as it's onsite in another PH city, and compensation is paid but with a relatively low allowance."
+    "score": 42,
+    "rationale": "The candidate's skills match is moderately high due to their broad range of technical skills, but the role relevance and eligibility fit are uncertain due to lack of information. The location is a major drawback since the candidate prefers Cebu, but the listing is onsite in Ortigas, Metro Manila, resulting in a lower location score. The compensation is paid, which contributes to the overall score."
   },
   {
     "title": "Intern Electronics Engineering (Software & Device Integration)",
@@ -851,8 +849,9 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91469075",
+    "summary": "Building solutions for the food industry including device integrations weighing scales, temperature sensors, and system automation.",
     "score": 32,
-    "rationale": "The candidate's skills do not align well with the Electronics Engineering internship, resulting in a low skills match score. The role is also not relevant to the candidate's target role as a Software Engineer. However, the internship is paid, which contributes to the overall score, but the location is onsite in another PH city, reducing the location score to 10 points."
+    "rationale": "The candidate's skills do not strongly match the Electronics Engineering internship, resulting in a low skills match score. The role relevance is also limited since the candidate's target role is Software Engineer, not Electronics Engineering. The location and eligibility fit scores are reduced due to the onsite requirement in Metro Manila and unspecified eligibility criteria."
   },
   {
     "title": "Technical Support Intern",
@@ -864,8 +863,11 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91499523",
-    "score": 32,
-    "rationale": "The candidate's skills do not align well with the Technical Support Intern role, resulting in a low skills match score. Although the candidate meets the general eligibility criteria, the location is not preferred, being in Metro Manila instead of Cebu, resulting in a lower location score. The compensation is also unspecified, which further reduces the overall score."
+    "eligibility": [
+      "3rd year students only"
+    ],
+    "score": 42,
+    "rationale": "The candidate's skills do not closely match the Technical Support Intern role, resulting in a low skills match score. The location is also not preferred, as it's onsite in Metro Manila, not Cebu. However, the candidate meets the year level requirement and has a relevant degree, contributing to some eligibility and role relevance points."
   },
   {
     "title": "IT Intern",
@@ -878,8 +880,8 @@
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91396473",
     "summary": "Gain hands-on experience in tech support, systems setup, troubleshooting, and real-world IT projects.",
-    "score": 32,
-    "rationale": "The candidate's skills do not directly align with the IT Intern listing, which focuses on tech support and systems setup, resulting in a low skills match score. The role is somewhat relevant to the candidate's target role as a Software Engineer, but the location is onsite in Makati City, which is not the candidate's preferred location of Cebu, resulting in a moderate location score. The compensation is unspecified, leading to a moderate compensation score."
+    "score": 52,
+    "rationale": "The candidate's skills match is moderate due to the listing's lack of specified requirements, but their software development background is relevant to the IT intern role. The candidate meets some eligibility criteria as a 3rd-year BS Computer Science student, but the location is onsite in Makati, not Cebu, resulting in a lower location score. The compensation is unspecified, reducing the overall score."
   },
   {
     "title": "IT Intern",
@@ -891,8 +893,8 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91256023",
-    "score": 42,
-    "rationale": "The candidate's skills are not directly matched with the listing's requirements since they are not specified, resulting in a moderate skills match score. The role relevance is limited as 'IT Intern' is not directly aligned with the target role of Software Engineer. The candidate does not meet the location preference and the listing lacks eligibility and compensation details."
+    "score": 52,
+    "rationale": "The candidate's skills align well with general IT and software development, but the listing's lack of specificity makes it difficult to determine a precise skills match. The role is somewhat relevant to the candidate's target role as a Software Engineer, and the candidate's degree and year level may be eligible, but the location is not preferred. The compensation is unspecified, which also affects the overall score."
   },
   {
     "title": "Internship - IT Department",
@@ -904,8 +906,8 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91482436",
-    "score": 32,
-    "rationale": "The candidate's skills match is limited due to lack of specified requirements, role relevance is moderate as the title doesn't explicitly mention software engineering, and eligibility fit is unknown. The location score is 10 since it's onsite in another PH city, and compensation is unspecified, scoring 7 points."
+    "score": 52,
+    "rationale": "The candidate's skills match is moderate due to lack of specific requirements, role relevance is high as the internship is in the IT department, eligibility fit and location are partial matches, and compensation is unspecified, resulting in a total score of 52. The candidate's software engineering background and skills are relevant to the IT department internship. However, the location is not the preferred Cebu, and other factors have limited information."
   },
   {
     "title": "IT Intern",
@@ -917,9 +919,9 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91282548",
-    "summary": "Assist the team to deploy systems according to defined specifications and monitor performance of systems deployed.",
-    "score": 42,
-    "rationale": "The candidate's skills match the listing moderately, but the role relevance and eligibility fit are unclear due to lack of information. The location score is 10 since Makati City is not the candidate's preferred location of Cebu, but is still within the Philippines. The compensation score is 7 as it is unspecified, contributing to the overall moderate score."
+    "summary": "Assist the team to deploy systems according to defined specifications and monitor the performance of systems deployed.",
+    "score": 52,
+    "rationale": "The candidate's skills align somewhat with the listing's vague requirements, and their target role as a Software Engineer is partially matched by the IT Intern title. However, the location is onsite in Makati, which is not the candidate's preferred location, and the compensation is unspecified, leading to a moderate overall score."
   },
   {
     "title": "IT Intern",
@@ -932,25 +934,22 @@
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91273249",
     "summary": "Gain hands-on IT experience with mentorship in a dynamic, innovative beauty industry environment.",
-    "score": 32,
-    "rationale": "The candidate's skills are not explicitly matched with the listing's requirements, but their broad technical expertise earns some points. The role title 'IT Intern' is somewhat relevant to the target role of Software Engineer. However, the location is onsite in Metro Manila, which is not the candidate's preferred location, and other aspects like eligibility, compensation, and specific skills match are not well-defined in the listing."
+    "score": 0,
+    "rationale": ""
   },
   {
     "title": "Automation Intern (PAID INTERNSHIP)",
     "company": "SM Investments Corporation",
     "location": "Pasay City, Metro Manila",
     "deadline": null,
-    "compensation": null,
+    "compensation": "Paid internship (amount not specified)",
     "description": "Gain real-world automation experience with a leading conglomerate. Paid internship with professional development opportunities.",
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91032749",
     "summary": "Gain real-world automation experience with a leading conglomerate.",
-    "eligibility": [
-      "Paid internship"
-    ],
-    "score": 57,
-    "rationale": "The candidate's skills match is moderate due to the lack of specific requirements in the listing, but their experience in backend development and automation-related skills like Python and Bash scripting is notable. The role relevance is low since the title is Automation Intern, which doesn't directly align with the candidate's target role of Software Engineer. The eligibility fit and compensation are favorable, but the location is onsite in another PH city, reducing the score."
+    "score": 0,
+    "rationale": ""
   },
   {
     "title": "Business Analyst Intern",
@@ -963,8 +962,8 @@
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91363514",
     "summary": "Assist the team in supporting business and system-related tasks.",
-    "score": 32,
-    "rationale": "The candidate's skills do not align with the Business Analyst Intern role, resulting in a low skills match score. The role relevance is also low since the listing title and responsibilities do not match the candidate's target role of Software Engineer. However, the candidate meets some eligibility criteria by having a relevant degree, and the location score is moderate since Makati City is onsite in another PH city."
+    "score": 0,
+    "rationale": ""
   },
   {
     "title": "Data Governance Intern",
@@ -977,8 +976,8 @@
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91495493",
     "summary": "Assist in maintaining and updating master data, supporting data quality checks, standardization, and governance activities.",
-    "score": 32,
-    "rationale": "The candidate's skills do not strongly align with the Data Governance Intern role, resulting in a low skills match score. The location is also not preferred, as it is onsite in another PH city, and the role relevance is not high, given the candidate's target role is Software Engineer. The listing's lack of specified requirements and eligibility criteria, as well as unknown compensation, further limit the score."
+    "score": 0,
+    "rationale": ""
   },
   {
     "title": "Quality Assurance Intern",
@@ -990,8 +989,11 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91170482",
-    "score": 32,
-    "rationale": "The candidate's skills do not strongly align with the Quality Assurance Intern role, resulting in a low skills match score. The role is also not closely related to the candidate's target role of Software Engineer, further reducing the score. However, the candidate meets some basic eligibility criteria and the location, although not preferred, is still within the Philippines, contributing to the overall score."
+    "eligibility": [
+      "3rd year students only"
+    ],
+    "score": 0,
+    "rationale": ""
   },
   {
     "title": "Cloud Operations Intern-1",
@@ -1003,8 +1005,9 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91568108",
-    "score": 52,
-    "rationale": "The candidate's skills match the listing moderately with experience in cloud services like AWS, but the role relevance is limited as the listing is for a Cloud Operations Intern, not a software engineering position. The candidate's eligibility and eligibility fit are unknown due to lack of requirements, and the location is onsite in Makati, which is not the candidate's preferred location, resulting in a lower score. The compensation is also unspecified, further reducing the overall score."
+    "summary": "The Cloud Operations Intern will play an active role in supporting the Cloud Operations Core Team across essential operational functions,",
+    "score": 0,
+    "rationale": ""
   },
   {
     "title": "Software Engineer Intern",
@@ -1016,8 +1019,8 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91324097",
-    "score": 67,
-    "rationale": "The candidate's skills match is strong due to their extensive technical background, and the role is a good fit for their target position as a Software Engineer. However, the listing lacks specific requirements and eligibility details, making it difficult to fully assess the candidate's fit. The location in the Philippines, although not specifically Cebu, still earns a moderate score, and the lack of compensation information limits the overall score."
+    "score": 0,
+    "rationale": ""
   },
   {
     "title": "ACADEMIC INTERNSHIP - Junior Software Quality Assurance (QA)",
@@ -1029,11 +1032,8 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91214739",
-    "eligibility": [
-      "3rd year students only"
-    ],
-    "score": 32,
-    "rationale": "The candidate's skills match is low due to the listing being for a QA role, but they do have relevant experience in system design and development. The role relevance and eligibility fit are also low since the candidate is not a 3rd year student and is targeting a Software Engineer role. The location score is 10 pts as it is onsite in another PH city, and compensation is unspecified, resulting in a moderate overall score."
+    "score": 0,
+    "rationale": ""
   },
   {
     "title": "ACADEMIC INTERNSHIP - Junior Developer (PHP, MySQL, Angular)",
@@ -1045,9 +1045,8 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91214696",
-    "summary": "Gain hands-on startup experience as a Junior Developer Intern while growing your skills and contributing to real projects.",
-    "score": 42,
-    "rationale": "The candidate's skills do not strongly match the listing's requirements, which specifically mention PHP, MySQL, and Angular, resulting in a low skills match score. However, the candidate meets some general eligibility criteria as a Computer Science student and the role is somewhat relevant to their target role as a Software Engineer. The location is also a drawback since the candidate prefers Cebu and the listing is onsite in Mandaluyong City, Metro Manila."
+    "score": 0,
+    "rationale": ""
   },
   {
     "title": "Full Stack Web Developer Intern",
@@ -1059,22 +1058,23 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91534529",
-    "summary": "Help design, build, and maintain secure and user-friendly web applications for financial services.",
-    "score": 82,
-    "rationale": "The candidate's skills match the listing well due to their experience in full-stack development with technologies like JavaScript, React, and Node.js. The role is also relevant to the candidate's target role as a Software Engineer, and the location is a perfect match since it's based in Cebu. Although eligibility and compensation details are unspecified, the candidate's overall profile and the listing's requirements align well, resulting in a high score."
+    "summary": "In this role, you will help us design, build, and maintain secure and user-friendly web applications that support our financial services.",
+    "score": 0,
+    "rationale": ""
   },
   {
     "title": "Full Stack Web Developer - IT Intern",
     "company": null,
-    "location": "BAI Finance's location not mentioned",
+    "location": "Cebu City, Cebu",
     "deadline": null,
     "compensation": null,
     "description": "BAI Finance is looking for a tech-savvy Full Stack Web Developer Intern to join our IT team. In this role, you will act as a\nJob...",
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91511325",
-    "score": 44,
-    "rationale": "The candidate's skills match the listing moderately well due to their experience with web development technologies like JavaScript, React, and Node.js. However, the listing lacks specific requirements and eligibility details, making it difficult to assess the candidate's fit. The location and compensation are also unspecified, resulting in a lower overall score."
+    "summary": "In this role, you will act as a tech-savvy Full Stack Web Developer Intern to join our IT team.",
+    "score": 0,
+    "rationale": ""
   },
   {
     "title": "EUS Intern",
@@ -1089,8 +1089,8 @@
     "eligibility": [
       "Currently enrolled in a Bachelor's degree program in Information Technology, Computer Science, or a related field"
     ],
-    "score": 52,
-    "rationale": "The candidate's skills match and role relevance are not fully leveraged in this internship listing, but their degree in Computer Science meets the eligibility requirements. However, the location is not the preferred Cebu, and the compensation is unspecified, resulting in a moderate score. The candidate's experience and skills may be more suited to a different role, but they may still be eligible for this internship."
+    "score": 0,
+    "rationale": ""
   },
   {
     "title": "Software Developer Intern",
@@ -1102,9 +1102,8 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/88979178",
-    "summary": "Build and support airline software applications.",
-    "score": 52,
-    "rationale": "The candidate's skills match the listing moderately well, and the role is relevant to their target position as a Software Engineer. However, the location is not preferred, being in Taguig City instead of Cebu, and eligibility and compensation details are unspecified, limiting the overall score."
+    "score": 0,
+    "rationale": ""
   },
   {
     "title": "Student IT Intern/OJT (600 HRS)",
@@ -1116,9 +1115,9 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91164404",
-    "summary": "Assist in the setup and deployment of laptops, mobile devices, and other IT equipment",
-    "score": 32,
-    "rationale": "The internship listing scores low due to a lack of skills match, as the candidate's expertise in backend development and system design does not align with the IT equipment setup and deployment tasks. The listing's location in Pasig City also does not meet the candidate's preference for Cebu. However, the internship is paid, which contributes to the overall score, but the role relevance is limited as it is an IT internship rather than a software engineering role."
+    "summary": " Assist in the setup and deployment of laptops, mobile devices, and other IT equipment",
+    "score": 0,
+    "rationale": ""
   },
   {
     "title": "IT Intern",
@@ -1131,11 +1130,8 @@
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91036077",
     "summary": "The IT Intern will support system administration tasks and assist in the development of software and web applications.",
-    "eligibility": [
-      "academic internship only"
-    ],
-    "score": 42,
-    "rationale": "The candidate's skills match the listing's general IT focus, but specific requirements are not provided, limiting the skills match score. The role is not a direct fit for a Software Engineer, and the location is onsite in Metro Manila, rather than Cebu or remote. The internship is paid, as it is an academic requirement, but the candidate's year level is not specified, which may affect eligibility."
+    "score": 0,
+    "rationale": ""
   },
   {
     "title": "IT Intern / OJT",
@@ -1148,37 +1144,37 @@
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91107687",
     "summary": "Support tech operations, troubleshoot issues, and maintain systems.",
-    "score": 77,
-    "rationale": "The candidate's skills match is moderate due to the lack of specified requirements, but their role relevance and eligibility fit are strong given the general IT internship role. The location is a perfect match since it's based in Cebu, and the listing mentions an allowance, indicating a paid internship, contributing to the overall score."
+    "score": 0,
+    "rationale": ""
   },
   {
     "title": "IT/ Computer Science Interns",
     "company": "SM Investments Corporation",
-    "location": "null",
+    "location": "Pasay City, Metro Manila",
     "deadline": null,
     "compensation": null,
     "description": "Gain hands-on IT experience, learn new technologies, and grow your career as an IT Intern at SM Investments.",
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91032580",
-    "eligibility": [
-      "3rd year students only"
-    ],
-    "score": 67,
-    "rationale": "The candidate's skills match the listing well due to their broad range of technical skills, but the role relevance and eligibility fit are less clear due to the listing's general title and the candidate's unknown year level. The location score is assumed to be maximum due to the lack of specified location, implying potential for remote work or Cebu-based. The compensation is unspecified, resulting in a moderate score."
+    "score": 0,
+    "rationale": ""
   },
   {
     "title": "IT Intern",
     "company": "Baytech BPO Corporation",
     "location": "Pasig City, Metro Manila",
     "deadline": null,
-    "compensation": "PHP 8000 upon completion",
+    "compensation": "PHP 8000/upon completion",
     "description": "Successful applicants are entitled to an allowance where full amount is released upon successful completion of the internship programme.",
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91125124",
-    "score": 47,
-    "rationale": "The candidate's skills match is moderate due to lack of specific requirements, role relevance is somewhat low as 'IT Intern' is not directly related to Software Engineer, eligibility fit and requirements are unclear, location is onsite in another PH city, and compensation is paid but in the form of an allowance upon completion."
+    "eligibility": [
+      "academic internship only"
+    ],
+    "score": 0,
+    "rationale": ""
   },
   {
     "title": "QA Specialist",
@@ -1190,8 +1186,8 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91557861",
-    "score": 12,
-    "rationale": "The candidate's skills do not match the QA Specialist role, and the location is not in Cebu, resulting in low scores for skills match and location. The candidate's degree and experience are not explicitly relevant to the listing, and compensation is unspecified, contributing to the overall low score."
+    "score": 0,
+    "rationale": ""
   },
   {
     "title": "IT Support Specialist (Open to Fresh Graduates with Internship Experience)",
@@ -1203,11 +1199,12 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91413811",
+    "summary": "Provide IT support",
     "eligibility": [
-      "Fresh grads are open to apply"
+      "Fresh grads open to apply"
     ],
-    "score": 42,
-    "rationale": "The candidate's skills do not closely match the IT Support Specialist role, resulting in a low skills match score. However, the candidate meets the eligibility requirements as a fresh graduate, and the onsite location in Angeles City, Pampanga, although not the preferred Cebu, still earns some location points. The listing's lack of specified compensation and requirements, as well as the role's mismatch with the candidate's target Software Engineer role, further reduces the overall score."
+    "score": 0,
+    "rationale": ""
   },
   {
     "title": "QA Assistant",
@@ -1219,8 +1216,8 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91504319",
-    "score": 32,
-    "rationale": "The candidate's skills do not match the QA Assistant role, and the location is onsite in another PH city, resulting in lower scores for skills match and location. The candidate meets the general eligibility criteria as a Computer Science graduate, but the listing lacks specific requirements to fully assess eligibility fit. The role relevance is also low since the candidate targets a Software Engineer position, not a QA Assistant role."
+    "score": 0,
+    "rationale": ""
   },
   {
     "title": "Solutions Engineer Intern, Philippines",
@@ -1232,25 +1229,27 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91126467",
-    "summary": "The Intern will work closely with the Cisco pre-sales team.",
     "eligibility": [
-      "based on the Philippines location, possibly for Filipino citizens only"
+      "Based in Taguig, Philippines"
     ],
-    "score": 52,
-    "rationale": "The candidate's score is moderate due to a good skills match and eligibility fit, but the location is onsite in Taguig, which is not the preferred location of Cebu, resulting in a lower location score. The role relevance is also not ideal as the title is Solutions Engineer Intern, which is not exactly the target role of Software Engineer. The compensation is unspecified, but since it's an internship with a major company like Cisco, it's likely to be paid, although this is not explicitly stated."
+    "score": 0,
+    "rationale": ""
   },
   {
     "title": "React, Next.js",
     "company": "NYGC Services, Inc.",
-    "location": "Alabang, Muntinlupa",
+    "location": "Alabang Muntinlupa",
     "deadline": null,
     "compensation": "\u20b135,000 \u2013 \u20b150,000 per month",
     "description": "We are hiring for React, Next.js role for Alabang Muntinlupa location",
-    "requirements": [],
+    "requirements": [
+      "React",
+      "Next.js"
+    ],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91582101",
-    "score": 52,
-    "rationale": "The candidate's skills match the listing's requirements well, with React and Next.js in their skill set, earning 25 points. However, the location is not the candidate's preferred Cebu, resulting in 10 points for onsite work in another PH city. The lack of eligibility, compensation, and detailed requirements information limits the overall score, but the role is relevant to the candidate's target role as a Software Engineer."
+    "score": 0,
+    "rationale": ""
   },
   {
     "title": "Software QA Engineering Intern",
@@ -1262,9 +1261,9 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/85909366",
-    "summary": "work closely with our QA engineers and developers to ensure the quality and reliability of our products through various tasks",
-    "score": 52,
-    "rationale": "The candidate's skills match the listing moderately, given the focus on software engineering and potential overlap with QA engineering, earning around 10-15 points. The role relevance is somewhat low since the listing is for a QA engineering intern rather than a software engineer position, scoring around 5-10 points. The candidate does not meet the location preference, scoring 10 points, and the listing does not specify compensation or eligibility, resulting in 7 points for compensation and assuming some eligibility fit for the remaining points."
+    "summary": "Work closely with QA engineers and developers to ensure the quality and reliability of products",
+    "score": 0,
+    "rationale": ""
   },
   {
     "title": "Trainee QA Engineer (Internship)",
@@ -1276,9 +1275,9 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91130739",
-    "summary": "The Trainee QA Engineer plays a key role in supporting quality assurance efforts across Zaelab\u2019s client projects.",
-    "score": 32,
-    "rationale": "The candidate's skills do not closely match the QA Engineer role, resulting in a low skills match score. However, the location is a good fit since it's in the Philippines, and the company does not specify any eligibility or compensation requirements that would disqualify the candidate. The role relevance score is low since the candidate is targeting a Software Engineer position, not a QA Engineer role."
+    "summary": "The Trainee QA Engineer plays a key role in supporting quality assurance efforts across Zaelab\u2019s client projects. This includes working with QA Manager.",
+    "score": 0,
+    "rationale": ""
   },
   {
     "title": "ACE Luzon - IT Internship 2026",
@@ -1290,24 +1289,23 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/90344621",
-    "summary": "Representing IT in front of Site Leaders, responsible for daily production work tasks and provides advanced support.",
-    "score": 32,
-    "rationale": "The candidate's skills match is not explicitly evaluated due to lack of requirements, but their extensive technical background suggests potential alignment. The role relevance is limited as the title is 'IT Internship' rather than specifically 'Software Engineer'. The internship is onsite in Quezon City, which is not the candidate's preferred location, resulting in a lower location score, and other aspects like eligibility and compensation are not specified, leading to reduced scores in those areas."
+    "summary": "Representing IT in front of Site Leaders, responsible for daily production work tasks and providing advanced work.",
+    "score": 0,
+    "rationale": ""
   },
   {
     "title": "IT Service Interns",
     "company": "ClearSource BPO, Inc.",
-    "location": "null",
-    "deadline": "null",
-    "compensation": "null",
+    "location": "Ortigas, Metro Manila",
+    "deadline": null,
+    "compensation": "\u20b110,000 \u2013 \u20b111,400 per month",
     "description": "Provide timely response and resolution of assigned ticket requests",
-    "requirements": "null",
+    "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91143584",
-    "summary": "Resolve assigned ticket requests in a timely manner",
-    "eligibility": "null",
-    "score": 77,
-    "rationale": "The candidate's skills match the listing moderately due to the lack of specific technical requirements, but their experience in backend development and system design is a plus. The role relevance is somewhat low since the title is IT Service Interns, which may not directly align with the candidate's target role as a Software Engineer. The candidate's eligibility and location preferences are not explicitly contradicted by the listing, and since the listing's location is unspecified, it is assumed to be remote or Cebu-based, and the internship is likely paid, contributing to the overall score."
+    "summary": "Provide timely response and resolution of assigned ticket requests",
+    "score": 0,
+    "rationale": ""
   },
   {
     "title": "IT INTERNS",
@@ -1320,7 +1318,7 @@
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91473173",
     "score": 32,
-    "rationale": "The candidate's skills are not matched against specific requirements, but their experience suggests strong technical abilities. However, the location is onsite in another PH city, and compensation is unspecified, leading to reduced scores in those categories. The role relevance is moderate, as 'IT Intern' is related to but not directly equivalent to a Software Engineer position."
+    "rationale": "The candidate's skills and experience summary suggest a strong technical foundation, but the listing lacks specific requirements to assess skills match. The role relevance is moderate as 'IT INTERNS' is related to Software Engineer, but not a direct match. The candidate does not meet the location preference, and compensation is unspecified, resulting in a lower overall score."
   },
   {
     "title": "Data Analytics and Full Stack Developer Intern (PH)",
@@ -1332,9 +1330,9 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/87395381",
-    "summary": "You will be gaining hands-on experience on providing support and development of features in a web.",
-    "score": 52,
-    "rationale": "The candidate's skills match the listing moderately well, with relevant experience in backend development and full stack technologies, earning 15 points. The role is somewhat relevant to the candidate's target role as a Software Engineer, scoring 15 points. However, the location is onsite in Makati City, scoring 10 points, and compensation is unspecified, scoring 7 points, resulting in a moderate overall score."
+    "summary": "Provide support and development of features in a web application as a Data Analytics and Full Stack Developer.",
+    "score": 0,
+    "rationale": ""
   },
   {
     "title": "Business Data Analyst Intern",
@@ -1346,9 +1344,9 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/87398453",
-    "summary": "Extract, clean, and interpret data using statistical techniques, writing and delivering reports, maintaining databases, and performing other data-related tasks.",
-    "score": 32,
-    "rationale": "The candidate's skills do not match the Business Data Analyst Intern role, resulting in a low skills match score. The role relevance is also low since the candidate targets a Software Engineer position. However, the candidate meets the eligibility fit and location scores to some extent, but the location score is only 10 since it's onsite in another PH city, contributing to the overall moderate score."
+    "summary": "Responsible to extract, clean, & interpret data, using statistical techniques, writing and delivering reports, maintaining databases, and",
+    "score": 0,
+    "rationale": ""
   },
   {
     "title": "Cybersecurity Intern",
@@ -1360,8 +1358,8 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/88987695",
-    "score": 32,
-    "rationale": "The candidate's skills do not strongly align with cybersecurity, resulting in a low skills match score. The role relevancy is also low since the candidate targets a Software Engineer position, but the internship is focused on cybersecurity. The candidate meets some criteria, such as being potentially eligible and the location being in the Philippines, but not their preferred location of Cebu, resulting in a moderate location score."
+    "score": 0,
+    "rationale": ""
   },
   {
     "title": "IT Intern (Automation & Business Analysis)",
@@ -1373,9 +1371,9 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/89283327",
-    "summary": "Assists in mapping and documenting existing business processes and workflows to identify inefficiencies and opportunities for improvement or implementation of process changes.",
-    "score": 32,
-    "rationale": "The candidate's skills match is limited due to the lack of specified requirements, and the role relevance is not ideal as the title is IT Intern rather than Software Engineer. The eligibility fit and compensation aspects are unclear, but the location score is 10 since it's onsite in another PH city, resulting in a total score of 32."
+    "summary": "Assists in mapping and documenting existing business processes and workflows to identify inefficiencies and opportunities for improvement.",
+    "score": 0,
+    "rationale": ""
   },
   {
     "title": "Information Technology Intern",
@@ -1387,23 +1385,22 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/88361447",
-    "summary": "Interns support the team in maintaining efficient IT infrastructure. The role provides exposure to both IT Helpdesk and IT Infrastructure functions.",
-    "score": 42,
-    "rationale": "The candidate's skills do not closely align with the IT Intern role, resulting in a low skills match score. The location is also not preferred, as it is onsite in Makati City, which scores 10 points. However, the role is somewhat relevant to the candidate's target role as a Software Engineer, and since the compensation is unspecified, it scores 7 points."
+    "score": 0,
+    "rationale": ""
   },
   {
     "title": "ACE Luzon - IT Internship (Start ASAP)",
     "company": "Concentrix",
-    "location": "PHL Quezon City",
+    "location": "PHL Quezon City site",
     "deadline": null,
     "compensation": null,
     "description": "IT Operations role responsible for system-level support, telephony, security, and infrastructure management at PHL Quezon City site.\nYour Role\nKey...",
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/90540113",
-    "summary": "Key responsibilities include system-level support, telephony, security, and infrastructure management.",
-    "score": 32,
-    "rationale": "The candidate's skills do not closely match the IT Operations role, resulting in a low skills match score. The role is also not a close match to the candidate's target role of Software Engineer, and the location is onsite in Quezon City, which is not the candidate's preferred location of Cebu. However, the candidate may still be eligible for the internship and the company is a reputable one, but the lack of information on compensation and specific requirements limits the overall score."
+    "summary": "system-level support, telephony, security, and infrastructure management",
+    "score": 0,
+    "rationale": ""
   },
   {
     "title": "Jr. Analyst Programmer",
@@ -1415,8 +1412,8 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91556987",
-    "score": 32,
-    "rationale": "The candidate's skills match is moderate due to lack of specific requirements, role relevance is low as Jr. Analyst Programmer doesn't closely match Software Engineer, and eligibility fit is unknown. The location score is 10 since it's onsite in another PH city, and compensation is unspecified, scoring 7. Overall, the score is 32 out of 100."
+    "score": 0,
+    "rationale": ""
   },
   {
     "title": "Marketing Specialists",
@@ -1441,7 +1438,7 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91548325",
-    "summary": "This role involves basic coding, testing, and documentation tasks under close supervision.",
+    "summary": "The Junior Analyst Programmer is focused on basic coding, testing, and documentation tasks under close supervision.",
     "score": 0,
     "rationale": ""
   },
@@ -1506,10 +1503,12 @@
     "deadline": null,
     "compensation": null,
     "description": "Join QIMA as a Process Improvement Engineer Intern to deploy AI solutions and optimize operations in a global quality control company.\nYour...",
-    "requirements": [],
+    "requirements": [
+      "AI"
+    ],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/90730843",
-    "summary": "Deploy AI solutions and optimize operations in a global quality control company.",
+    "summary": "deploy AI solutions and optimize operations in a global quality control company",
     "score": 0,
     "rationale": ""
   },
@@ -1536,7 +1535,7 @@
     "requirements": [],
     "source": "jobstreet",
     "url": "https://ph.jobstreet.com/job/91132082",
-    "summary": "Executing the plan and managing all activities in the plan to ensure that all the objectives are met and that the solution works as expected.",
+    "summary": "Executing the plan and managing all activities in the plan to ensure that all the objectives are met and that the solution works as expected",
     "score": 0,
     "rationale": ""
   }
