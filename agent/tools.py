@@ -117,7 +117,7 @@ def _eligibility_excludes_cs_it(eligibility: list[str]) -> bool:
     Returns False (keep) when no non-CS keyword is found, or when a CS/IT
     keyword co-occurs (benefit of the doubt for mixed-field listings).
     """
-    joined = " " + " ".join(eligibility).lower() + " "
+    joined = " " + " ".join(e for e in eligibility if e is not None).lower() + " "
     if any(kw in joined for kw in _CS_IT_KEYWORDS):
         return False
     return any(kw in joined for kw in _NON_CS_IT_KEYWORDS)
