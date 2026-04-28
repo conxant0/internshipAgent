@@ -9,3 +9,4 @@ data/preferences.json
 data/profile.json
 data/resume.pdf
 .venv/
+node_modules/

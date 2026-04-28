@@ -1,5 +1,7 @@
 """Diagnostic script: intercept GraphQL requests+responses on JobStreet listing page."""
+
 import json
+
 from playwright.sync_api import sync_playwright
 
 URL = "https://ph.jobstreet.com/Intern-jobs-in-information-communication-technology/in-Philippines"
@@ -13,7 +15,9 @@ def handle_response(response):
         req_body = response.request.post_data_json
         op = req_body.get("operationName", "?") if isinstance(req_body, dict) else "?"
         resp_body = response.json()
-        graphql_calls.append({"operation": op, "request": req_body, "response": resp_body})
+        graphql_calls.append(
+            {"operation": op, "request": req_body, "response": resp_body}
+        )
     except Exception:
         pass
 
@@ -38,14 +42,16 @@ print(f"\n--- Captured {len(graphql_calls)} GraphQL operations ---\n")
 for call in graphql_calls:
     op = call["operation"]
     resp = call["response"]
-    data_keys = list(resp["data"].keys()) if resp and isinstance(resp.get("data"), dict) else []
+    data_keys = (
+        list(resp["data"].keys()) if resp and isinstance(resp.get("data"), dict) else []
+    )
     print(f"Operation: {op}  →  data keys: {data_keys}")
 
 print("\n\n=== FULL DUMP of each operation ===")
 for call in graphql_calls:
     op = call["operation"]
     resp = call["response"]
-    print(f"\n{'='*60}")
+    print(f"\n{'=' * 60}")
     print(f"OPERATION: {op}")
     print(f"--- Request variables ---")
     req = call["request"]
