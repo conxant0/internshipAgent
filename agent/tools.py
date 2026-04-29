@@ -36,20 +36,28 @@ def fetch_descriptions(listings: List[dict]) -> List[dict]:
             try:
                 listing["description"] = fetcher(listing["url"])
             except Exception as e:
-                logger.warning(f"fetch_description failed for {listing.get('url')}: {e}")
+                logger.warning(
+                    f"fetch_description failed for {listing.get('url')}: {e}"
+                )
     return listings
 
 
 def enrich_listings(listings: List[dict]) -> List[dict]:
     """Use a small LLM to extract structured fields from each listing's description."""
     import json as _json
+
     for listing in listings:
         description = listing.get("description") or ""
         if not description:
             continue
         try:
             response = chat(
-                [{"role": "user", "content": _ENRICH_PROMPT.format(description=description)}],
+                [
+                    {
+                        "role": "user",
+                        "content": _ENRICH_PROMPT.format(description=description),
+                    }
+                ],
                 model=_ENRICH_MODEL,
             )
             content = response.content.strip()
@@ -59,7 +67,14 @@ def enrich_listings(listings: List[dict]) -> List[dict]:
                     content = content[4:]
                 content = content.rsplit("```", 1)[0].strip()
             extracted = _json.loads(content)
-            for field in ("compensation", "deadline", "location", "requirements", "summary", "eligibility"):
+            for field in (
+                "compensation",
+                "deadline",
+                "location",
+                "requirements",
+                "summary",
+                "eligibility",
+            ):
                 if extracted.get(field):
                     listing[field] = extracted[field]
         except Exception as e:
@@ -151,30 +166,65 @@ _SCORE_MODEL = "llama-3.3-70b-versatile"
 
 _SCORE_PROMPT = """Score this internship listing for the candidate below. Return ONLY a JSON object.
 
-Scoring framework (total = 100 pts):
-- Skills match (25 pts): How well the candidate's existing skills align with the listing's requirements.
-- Role relevance (20 pts): How closely the listing title and responsibilities match the candidate's target role: {target_role}.
-- Eligibility fit (20 pts): Whether the candidate meets year level, degree, citizenship, or hours requirements.
-- Location (20 pts): Candidate prefers {location_preference}. Cebu-based or remote = 20 pts; onsite in other PH cities = 10 pts; international onsite = 2 pts.
-- Compensation (15 pts): Paid = 15 pts; unpaid = 0 pts; unspecified = 7 pts.
+<scoring_framework total="100">
 
-Candidate profile:
+SKILLS MATCH (25 pts)
+Score how well the candidate's existing skills align with listed requirements.
+- Strong overlap (most required skills present): 20–25
+- Moderate overlap (some key skills present): 10–19
+- Weak overlap (few or no matching skills): 0–9
+
+ROLE RELEVANCE (20 pts)
+Score how closely the title and responsibilities match target role: {target_role}
+- Direct match (title + responsibilities align): 16–20
+- Adjacent match (related field, transferable scope): 8–15
+- Weak match (different function or domain): 0–7
+
+ELIGIBILITY FIT (20 pts)
+Score whether the candidate meets year level, degree, citizenship, or hours requirements.
+- Fully meets all stated requirements: 20
+- Meets most requirements, minor gaps: 10–19
+- Does not meet key requirements: 0–9
+- Requirements unspecified: 10 (partial credit, uncertainty penalty)
+
+LOCATION (20 pts)
+Candidate prefers: {location_preference}
+- Cebu-based or fully remote: 20
+- Hybrid with Cebu presence: 15
+- Onsite in another PH city: 10
+- International onsite: 2
+- Location unspecified: 8 (uncertainty penalty)
+
+COMPENSATION (15 pts)
+- Paid with specific amount or range stated: 15
+- Paid, but no amount given: 10
+- Compensation unspecified: 5
+- Unpaid: 0
+
+</scoring_framework>
+
+UNCERTAINTY RULE: When critical information is missing or vague, apply the partial score shown above — do NOT assume the best case.
+
+<candidate_profile>
 {profile_json}
+</candidate_profile>
 
-Listing:
+<listing>
 Title: {title}
 Company: {company}
 Location: {location}
 Description: {description}
 Requirements: {requirements}
 Eligibility: {eligibility}
+</listing>
 
-Return ONLY: {{"score": <int 0-100>, "rationale": "<2-3 sentence explanation of the score>"}}"""
+Return ONLY: {{"score": <int 0-100>, "rationale": "<2-3 sentences explaining the score, calling out any fields penalized for missing information>"}}"""
 
 
 def score_listing(listings: List[dict], profile: dict, preferences: dict) -> List[dict]:
     """Score each listing 0-100 using LLM with the user's profile and preferences."""
     import json as _json
+
     result = []
     for listing in listings:
         scored = dict(listing)
@@ -186,8 +236,10 @@ def score_listing(listings: List[dict], profile: dict, preferences: dict) -> Lis
             company=listing.get("company") or "",
             location=listing.get("location") or "Not specified",
             description=listing.get("description") or "",
-            requirements=", ".join(r for r in (listing.get("requirements") or []) if r) or "Not specified",
-            eligibility=", ".join(listing.get("eligibility") or []) or "Not specified",
+            requirements=", ".join(r for r in (listing.get("requirements") or []) if r)
+            or "Not specified",
+            eligibility=", ".join(e for e in (listing.get("eligibility") or []) if e)
+            or "Not specified",
         )
         raw = None
         for attempt in range(2):
@@ -210,7 +262,9 @@ def score_listing(listings: List[dict], profile: dict, preferences: dict) -> Lis
             except Exception:
                 pass
         else:
-            logger.warning(f"score_listing failed after 2 attempts for '{listing.get('title')}'; assigning score=0. Last LLM output: {raw!r}")
+            logger.warning(
+                f"score_listing failed after 2 attempts for '{listing.get('title')}'; assigning score=0. Last LLM output: {raw!r}"
+            )
             scored["score"] = 0
             scored["rationale"] = ""
         result.append(scored)
@@ -254,24 +308,28 @@ def write_report(listings: List[dict], output_path: str = "") -> str:
     """Write the ranked report to a markdown file. Returns the file path."""
     import os
     from pathlib import Path
+
     if not output_path:
         output_path = str(Path(__file__).parent.parent / "output" / "report.md")
-    os.makedirs(os.path.dirname(output_path) if os.path.dirname(output_path) else ".", exist_ok=True)
+    os.makedirs(
+        os.path.dirname(output_path) if os.path.dirname(output_path) else ".",
+        exist_ok=True,
+    )
     lines = ["# Internship Listings — Ranked Report\n"]
 
     for i, listing in enumerate(listings, 1):
-        title        = listing.get("title") or "Untitled"
-        company      = listing.get("company") or "Unknown"
-        score        = listing.get("score", 0)
-        location     = listing.get("location") or "Not specified"
-        deadline     = listing.get("deadline") or "Not specified"
+        title = listing.get("title") or "Untitled"
+        company = listing.get("company") or "Unknown"
+        score = listing.get("score", 0)
+        location = listing.get("location") or "Not specified"
+        deadline = listing.get("deadline") or "Not specified"
         compensation = listing.get("compensation") or "Not specified"
         requirements = listing.get("requirements") or []
-        summary      = listing.get("summary") or ""
+        summary = listing.get("summary") or ""
         if isinstance(summary, list):
             summary = " ".join(str(s) for s in summary)
-        rationale    = listing.get("rationale") or ""
-        url          = listing.get("url") or "#"
+        rationale = listing.get("rationale") or ""
+        url = listing.get("url") or "#"
 
         lines.append(f"## #{i} — {title} @ {company}")
         lines.append(f"Score: {score}/100")
